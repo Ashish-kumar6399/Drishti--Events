@@ -69,24 +69,98 @@
               <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="About.html">About</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#">Services</a>
-            </li>
-
-            <!-- <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item active" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </li> -->
+            <!-- 
+            <div class="dropdown">
+              <button class="btn dropdown-toggle fw-bold border-0" style="margin-top: 0.2rem;" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false">SERVICES</button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">Special Events</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Wedding</a></li>
+                    <li><a class="dropdown-item" href="#">Conference</a></li>
+                    <li><a class="dropdown-item" href="#">Concert</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">Standard Events</a></li>
+                <li><a class="dropdown-item" href="#">Social Events</a></li>
               </ul>
             </div> -->
+
+            <!-- Navigation Menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                SERVICES
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <!-- Submenu for Special Events -->
+                <li class="dropdown-submenu position-relative">
+                  <a class="dropdown-item dropdown-toggle" href="#">Special Events</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Wedding</a></li>
+                    <li><a class="dropdown-item" href="#">Conference</a></li>
+                    <li><a class="dropdown-item" href="#">Concert</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">Standard Events</a></li>
+                <li><a class="dropdown-item" href="#">Social Events</a></li>
+              </ul>
+            </li>
+
+            <!-- JavaScript for Submenu -->
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+
+                dropdownSubmenus.forEach((submenu) => {
+                  const submenuToggle = submenu.querySelector('.dropdown-toggle');
+
+                  submenuToggle.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent the parent dropdown from closing
+                    e.preventDefault();
+
+                    const dropdownMenu = submenu.querySelector('.dropdown-menu');
+                    dropdownMenu.classList.toggle('show');
+                  });
+                });
+
+                // Close all dropdowns when clicking outside
+                document.addEventListener('click', (e) => {
+                  dropdownSubmenus.forEach((submenu) => {
+                    const dropdownMenu = submenu.querySelector('.dropdown-menu');
+                    if (!submenu.contains(e.target)) {
+                      dropdownMenu.classList.remove('show');
+                    }
+                  });
+                });
+              });
+            </script>
+
+            <!-- Add this CSS to Style the Submenu Properly -->
+            <style>
+              .dropdown-submenu .dropdown-menu {
+                top: 0;
+                left: 100%;
+                /* Ensure submenu opens to the right */
+                margin-left: 0;
+                /* Prevent additional offset */
+                border-radius: 0.25rem;
+                /* Optional for consistent styling */
+              }
+
+              .dropdown-menu .dropdown-submenu:hover>.dropdown-menu {
+                display: block;
+                /* Ensure it stays open when hovered */
+              }
+            </style>
+
+
             <li class="nav-item ">
               <a class="nav-link" href="#">Contact</a>
             </li>
@@ -124,24 +198,28 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="section about_para">
-                <h2>About Us</h2>
-                <p>
-                    Founded in 1996 by <span class="highlight">Bryan Rafanelli</span>, Rafanelli Events has evolved into a beacon of innovation
-                    and excellence in the event planning industry. Our full-service approach and meticulous
-                    attention to detail have earned us a stellar reputation, with offices strategically located in New
-                    York City, Palm Beach, and Boston, extending our reach globally.
+                <h2 class="text-decoration-underline mb-4">About Us</h2>
+                <p class="Courgette">
+                  Drishti is a well established Event management Company with the strategy to establish an exciting and inspiring environment around the audience so that our guests or prospective clients experience cutting edge art direction of every visual element - We lift the impact of each and every event,Meetings, Incentives, Conferencing, Exhibitions or Branding Portfolio to new level of success and unparalleled identity.
+                </p>
+                <p class="Courgette">
+                  Event management involves visualizing concepts, planning, budgeting, organizing and executing events such as fashion shows, musical concerts, corporate seminars, wedding celebrations, theme parties, product launching etc. We, Allure Events, help our clients achieve their objectives through the development and execution of customized special events. Maximum client satisfaction will be achieved through our involvement.  Our professional experience in event planning covers every aspect of event management, which also includes a comprehensive network of relevant contacts ensuring that you are provided with a superior quality of services as well as competitive rates at every stage of event planning.
                 </p>
                 <p>
-                    At Rafanelli Events, we specialize in a broad spectrum of gatherings, from <span class="highlight">destination
-                    weddings</span> and large-scale corporate events to <span class="highlight">star-studded galas</span> and impactful non-profit
-                    fundraisers. Each event, whether hosting 50 or 15,000 attendees, is treated as a unique
-                    creative challenge, deserving of a custom-tailored celebration.
-                </p>
-                <p>
-                    Our team of fifty dedicated design and production professionals embraces the philosophy that
-                    we’re not just planning events—we’re crafting extraordinary experiences. This commitment
-                    drives us to consistently deliver events that are not only visually stunning but also deeply
-                    personal, reflecting the unique tastes and personalities of each client.
+                  <ol class="fw-bold container fs-6   Courgette mt-1 mt-lg-3"  style="">
+                    <li class="text-decoration-none">Drishti is the team of professionals with a corporate background , we know the value of services, commitments& Deadlines.
+                    </li>
+                    <li>We are the value gor money in terms of services & comfort offer to our clients.
+                      
+                    </li>
+                    <li>We believe in Relationship building  & to take the the bonf forward so thaht we are the first you think while planning your event or wedding.
+                      
+                    </li>
+                    <li>We believe in Relationship building  & to take the the bonf forward so thaht we are the first you think while planning your event or wedding.
+                      
+                    </li>
+                    
+                  </ol>
                 </p>
             </div>
         </div>
@@ -153,57 +231,72 @@
   
 
   <!------------------------------------------- Imges Grid----------------------------------------- -->
-
-  <div class="">
-    <h2 class="text-center">Event Highlights</h2>
-    <div class="row image-grid">
-        <div class="col-md-6 mb-4">
-            <img src="img/About/corporate.webp" alt="Event Image 1">
-        </div>
-        <div class="col-md-6 mb-4">
-            <img src="img/About/ring ceromany.webp" alt="Event Image 2">
-        </div>
-        <div class="col-md-6 mb-4">
-            <img src="img/About/weeding.webp" alt="Event Image 3">
-        </div>
-        <div class="col-md-6 mb-4">
-            <img src="img/About/ring ceromany.webp" alt="Event Image 4">
-        </div>
-    </div>
-</div>
-
- 
-
-
+  
+  
+  
+  
   <!------------------------------------------- About section----------------------------------------- -->
-
+  
   <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="section about_para">
-                <!-- <h2>About Us</h2> -->
-                <p>
-                    Founded in 1996 by <span class="highlight">Bryan Rafanelli</span>, Rafanelli Events has evolved into a beacon of innovation
-                    and excellence in the event planning industry. Our full-service approach and meticulous
-                    attention to detail have earned us a stellar reputation, with offices strategically located in New
-                    York City, Palm Beach, and Boston, extending our reach globally.
-                </p>
-                <p>
-                    At Rafanelli Events, we specialize in a broad spectrum of gatherings, from <span class="highlight">destination
-                    weddings</span> and large-scale corporate events to <span class="highlight">star-studded galas</span> and impactful non-profit
-                    fundraisers. Each event, whether hosting 50 or 15,000 attendees, is treated as a unique
-                    creative challenge, deserving of a custom-tailored celebration.
-                </p>
-                <p>
-                    Our team of fifty dedicated design and production professionals embraces the philosophy that
-                    we’re not just planning events—we’re crafting extraordinary experiences. This commitment
-                    drives us to consistently deliver events that are not only visually stunning but also deeply
-                    personal, reflecting the unique tastes and personalities of each client.
-                </p>
+    <!-- <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="section about_para">
+          <p>
+            Founded in 1996 by <span class="highlight">Bryan Rafanelli</span>, Rafanelli Events has evolved into a beacon of innovation
+            and excellence in the event planning industry. Our full-service approach and meticulous
+            attention to detail have earned us a stellar reputation, with offices strategically located in New
+            York City, Palm Beach, and Boston, extending our reach globally.
+          </p>
+          <p>
+            At Rafanelli Events, we specialize in a broad spectrum of gatherings, from <span class="highlight">destination
+              weddings</span> and large-scale corporate events to <span class="highlight">star-studded galas</span> and impactful non-profit
+              fundraisers. Each event, whether hosting 50 or 15,000 attendees, is treated as a unique
+              creative challenge, deserving of a custom-tailored celebration.
+            </p>
+            <p>
+              Our team of fifty dedicated design and production professionals embraces the philosophy that
+              we’re not just planning events—we’re crafting extraordinary experiences. This commitment
+              drives us to consistently deliver events that are not only visually stunning but also deeply
+              personal, reflecting the unique tastes and personalities of each client.
+            </p>
+          </div>
+        </div>
+      </div> -->
+      <!-- <ul class="fw-bold container fs-6">
+        <li>Drishti is the team of professionals with a corporate background , we know the value of services, commitments& Deadlines.
+        </li>
+        <li>We are the value gor money in terms of services & comfort offer to our clients.
+          
+        </li>
+        <li>We believe in Relationship building  & to take the the bonf forward so thaht we are the first you think while planning your event or wedding.
+          
+        </li>
+        <li>We believe in Relationship building  & to take the the bonf forward so thaht we are the first you think while planning your event or wedding.
+          
+        </li>
+        
+      </ul> -->
+    </div>
+    
+    
+    
+      <div class=" container">
+        <h2 class="text-center">Event Highlights</h2>
+        <div class="row image-grid ">
+            <div class="col-md-6 mb-4">
+                <img src="img/About/corporate.webp" alt="Event Image 1">
+            </div>
+            <div class="col-md-6 mb-4">
+                <img src="img/About/ring ceromany.webp" alt="Event Image 2">
+            </div>
+            <div class="col-md-6 mb-4">
+                <img src="img/About/weeding.webp" alt="Event Image 3">
+            </div>
+            <div class="col-md-6 mb-4">
+                <img src="img/About/marriage.webp" alt="Event Image 4">
             </div>
         </div>
     </div>
-</div>
 
 
 
