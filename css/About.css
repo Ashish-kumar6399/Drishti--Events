@@ -1,0 +1,39 @@
+.about_heading{
+    font-size: 4.5rem ;
+}
+
+body{
+    background-color: #f2f0ec;
+}
+
+
+.about_para {
+    padding: 10px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+.about_parah2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.about_para p {
+    margin-bottom: 20px;
+}
+.highlight {
+    color: #d4a373;
+    font-weight: bold;
+}
+
+
+.image-grid {
+    margin-top: 40px;
+}
+.image-grid img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+
+
