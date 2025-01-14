@@ -1,80 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
-  <!-- swiper js link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- Bootstra[ Icons link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstra[ Icons link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <style>
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-family: swiper-icons;
+        font-size: 15px !important;
+        text-transform: none !important;
+        letter-spacing: 0;
+        font-variant: initial;
+        line-height: 1;
+        color: black;
+      }
+      .swiper-button-prev,
+      .swiper-rtl .swiper-button-next {
+        color: black;
+      }
 
-  <style>
-    .swiper-button-next:after,
-    .swiper-button-prev:after {
-      font-family: swiper-icons;
-      font-size: 15px !important;
-      text-transform: none !important;
-      letter-spacing: 0;
-      font-variant: initial;
-      line-height: 1;
-      color: black;
-    }
-    .swiper-button-prev, .swiper-rtl .swiper-button-next{
-      color: black;
-    }
-  </style>
+      @media (max-width: 576px) {
+        .dropdown-item::before {
+          transform: rotate(-90deg);
+        }
+        
+      }
 
-</head>
+      .navbar-expand-md .navbar-nav .dropdown-menu {
+        background-color: #d4c4b5;
+      }
+    </style>
+  </head>
 
-<body>
-
-
-
-
-
-
-  <!-- navbar Start -->
-  <nav class="navbar navbar-expand-md" style="background-color: #d4c4b5;">
-    <div class="container header_main_div">
-      <div class="d-lg-none d-md-none">
-        <img src="img/logo.webp" alt="Logo" />
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body">
-          <div>
-            <img src="img/logo.webp" alt="Logo" />
+  <body>
+    <!-- navbar Start -->
+    <nav class="navbar navbar-expand-md" style="background-color: #d4c4b5">
+      <div class="container header_main_div">
+       <a href="index.html"> <div class="d-lg-none d-md-none">
+          <img src="img/logo.webp" alt="Logo" />
+        </div> </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
           </div>
-          <ul class="navbar-nav justify-content-center flex-grow-1 mt-3">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="About.html">About</a>
-            </li>
-            <!-- <li class="nav-item">
+
+          <div class="offcanvas-body">
+            <a href="index.html">
+            <div>
+              <img src="img/logo.webp" alt="Logo" />
+            </div>
+          </a>
+            <ul class="navbar-nav justify-content-center flex-grow-1 mt-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+              </li>
+              <!-- <li class="nav-item">
               <a class="nav-link" href="#">Services</a>
             </li> -->
-            <!-- 
+              <!-- 
             <div class="dropdown">
               <button class="btn dropdown-toggle fw-bold border-0" style="margin-top: 0.2rem;" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false">SERVICES</button>
@@ -92,793 +126,904 @@
               </ul>
             </div> -->
 
-            <!-- Navigation Menu -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                SERVICES
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                <!-- Submenu for Special Events -->
-                <li class="dropdown-submenu position-relative">
-                  <a class="dropdown-item dropdown-toggle" href="#">Special Events</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Wedding</a></li>
-                    <li><a class="dropdown-item" href="#">Conference</a></li>
-                    <li><a class="dropdown-item" href="#">Concert</a></li>
-                  </ul>
-                </li>
-                <li><a class="dropdown-item" href="#">Standard Events</a></li>
-                <li><a class="dropdown-item" href="#">Social Events</a></li>
-              </ul>
-            </li>
+              <!-- Navigation Menu -->
+              <div class="dropdown" style="background-color: #d4c4b5;margin-top: 2px;">
+                <button
+                  class="btn fw-bolder dropdown-toggle border-0"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  SERVICES
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="dropend">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      >Special Events</a
+                    >
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item text-white" href="#">Valentine Day</a></li>
+                     
+                    </ul>
+                  </li>
+                  <li class="dropend"><a class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    href="#">Standard Events</a>
+                    
+                    <ul class="dropdown-menu">
+                      <li class=""><a class="dropdown-item text-white" href="#">Wedding Events</a></li>
+                      <li><a class="dropdown-item text-white" href="#">Corporate Events</a></li>
+                      <li><a class="dropdown-item text-white" href="#">Birthday Events</a></li>
+                      <li><a class="dropdown-item text-white" href="#">International Acts</a></li>
+                      <li><a class="dropdown-item text-white" href="#">Theme Parties</a></li>
+                      <li><a class="dropdown-item text-white" href="#">Celebrity Events</a></li>
+                      <li><a class="dropdown-item text-white" href="#">Award Ceremony Events</a></li>
+                      <li><a class="dropdown-item text-white" href="#">Musical Night</a></li>
+                      <li><a class="dropdown-item text-white" href="#">Special Events</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Social Events</a></li>
+                </ul>
+              </div>
 
-            <!-- JavaScript for Submenu -->
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+              <!-- JavaScript for Submenu -->
 
-                dropdownSubmenus.forEach((submenu) => {
-                  const submenuToggle = submenu.querySelector('.dropdown-toggle');
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <a class="text-decoration-none" href="booknow.html">
+              <div class="book_now">
+                <h5 class="text-white mt-4">Book now</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-                  submenuToggle.addEventListener('click', (e) => {
-                    e.stopPropagation(); // Prevent the parent dropdown from closing
-                    e.preventDefault();
+    <!-- navbar Start -->
 
-                    const dropdownMenu = submenu.querySelector('.dropdown-menu');
-                    dropdownMenu.classList.toggle('show');
-                  });
-                });
+    <!-- Carousel Start -->
 
-                // Close all dropdowns when clicking outside
-                document.addEventListener('click', (e) => {
-                  dropdownSubmenus.forEach((submenu) => {
-                    const dropdownMenu = submenu.querySelector('.dropdown-menu');
-                    if (!submenu.contains(e.target)) {
-                      dropdownMenu.classList.remove('show');
-                    }
-                  });
-                });
-              });
-            </script>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://wallpaperaccess.com/full/3732122.jpg"
+            class="d-block w-100 carousel_img"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-white fs-2">DRISHTI EVENTS SERVICES</h5>
+            <p class="text-white fs-2 Courgette fw-bolder">
+              Drishti Events Services is a full-service event management company
+              in New Delhi dedicated to quality and excellence
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://wallpapercave.com/wp/wp7488400.jpg"
+            class="d-block w-100 carousel_img"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-white fs-2">CORPORATES MEETINGS</h5>
+            <p class="text-white fs-2 text-white Courgette">
+              The Drishti Event Services has been the driving force behind some
+              of the greatest corporate,institutional and private events across
+              whole india.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/img/carousel_image.webp"
+            class="d-block w-100 carousel_img"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-            <!-- Add this CSS to Style the Submenu Properly -->
-            <style>
-              .dropdown-submenu .dropdown-menu {
-                top: 0;
-                left: 100%;
-                /* Ensure submenu opens to the right */
-                margin-left: 0;
-                /* Prevent additional offset */
-                border-radius: 0.25rem;
-                /* Optional for consistent styling */
-              }
+    <!------------------------------------------- categories Start----------------------------------------- -->
+    <div class="text-center mt-5 mt-lg-5 mb-4 mb-lg-3">
+      <h3 class="Courgette">Let's Plan Your Perfect Wedding</h3>
+      <!-- <h3 class="Courgette">welcome</h3> -->
+      <img src="img/welcome.webp" />
+    </div>
 
-              .dropdown-menu .dropdown-submenu:hover>.dropdown-menu {
-                display: block;
-                /* Ensure it stays open when hovered */
-              }
-            </style>
+    <div class="container py-sm-0 py-lg-5">
+      <div class="row text-center">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img
+              src="https://web.archive.org/web/20180202204828im_/http://drishtieventservices.com/webboxadmin/uploads/our_services/17180_1.jpg"
+              class="card-img-top"
+              alt="Bouquets & Style"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-muted Courgette fw-bold">
+                HALDI CEREMONY DECORATION
+              </h5>
+              <a href="#" class="btn btn-outline-secondary card_btn"
+                >BOOK NOW</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img
+              src="https://web.archive.org/web/20180519125213im_/http://drishtieventservices.com/webboxadmin/uploads/our_services/29826_2.jpg"
+              class="card-img-top"
+              alt="Wedding Planning"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-muted Courgette fw-bold">
+                MEHENDI CEREMONY DECORATION
+              </h5>
+              <a href="#" class="btn btn-outline-secondary card_btn"
+                >BOOK NOW</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img
+              src="https://web.archive.org/web/20180424181026im_/http://drishtieventservices.com/webboxadmin/uploads/birthday/16650_wed3.jpg"
+              class="card-img-top"
+              alt="Catering & Decoration"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-muted Courgette fw-bold">
+                Catering & Decoration
+              </h5>
+              <a href="#" class="btn btn-outline-secondary card_btn"
+                >BOOK NOW</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- About Start -->
 
-            <li class="nav-item ">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
+    <section class="about-us">
+      <div class="container about_main_div">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div
+            class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0 order-2 order-lg-1"
+          >
+            <!-- <p class="text-uppercase text-muted small mb-2 Courgette">About Us</p> -->
+            <h1 class="display-5 Courgette">About Us</h1>
+            <div class=" " style="margin-top: 6%; margin-bottom: 6%">
+              <img src="img/welcome.webp" />
+            </div>
+            <p class="mb-5">
+              Drishti is a well established Event management Company with the
+              strategy to establish an exciting and inspiring environment around
+              the audience so that our guests or prospective clients experience
+              cutting edge art direction of every visual element - We lift the
+              impact of each and every event, Meetings, Incentives,
+              Conferencing, Exhibitions or Branding Portfolio to new level of
+              success and unparalleled identity.
+            </p>
+            <a
+              href="About.html"
+              class="btn_second btn-outline-secondary px-4 py-3 mt-5"
+              >More About Us</a
+            >
+          </div>
+
+          <!-- Right Swiper Section -->
+          <div class="col-lg-6 text-end order-1 order-lg-2">
+            <div class="swiper-container w-100">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide w-100 swiper-slideee">
+                  <img
+                    class="w-100"
+                    src="img/birthday_image.webp"
+                    alt="Wedding Arch 1"
+                  />
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide w-100 swiper-slideee">
+                  <img src="img/About/about-1.jpg" alt="Wedding Arch 2" />
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide w-100 swiper-slideee">
+                  <img src="img/slide 3.webp" alt="Wedding Arch 3" />
+                </div>
+              </div>
+              <!-- Navigation Buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------------------- Delievry Start----------------------------------------- -->
+
+    <div
+      class="features-container d-block d-sm-flex container mt-sm-2 mt-lg-5 mb-sm-2 mb-lg-1 mt-3"
+    >
+      <div class="feature-item">
+        <div class="icon-circle">
+          <i class="fa-solid fa-truck"></i>
+        </div>
+        <h3>Free Delivery</h3>
+        <p>on every order, during the same day</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon-circle">
+          <i class="fa-solid fa-hands-bound"></i>
+        </div>
+        <h3>Hand – Tied</h3>
+        <p>bouquets and beautiful plants</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon-circle">
+          <i class="bi bi-flower2"></i>
+        </div>
+        <h3>Exclusive Design</h3>
+        <p>by the best florist from NYC</p>
+      </div>
+    </div>
+
+    <!------------------------------------------- Shop Latest Styles----------------------------------------- -->
+
+    <div class="text-center mt-5 pt-3 mt-lg-5 mb-4 mb-lg-3">
+      <h3 class="Courgette">Our Servives</h3>
+      <!-- <h3 class="Courgette">shop</h3> -->
+      <img src="img/welcome.webp" />
+    </div>
+    <div class="text-center justify-content-center container mb-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 pb-0 pb-lg-5">
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="img/corporate 1.webp"
+              class="card-img-top categories_img"
+              alt="Skyscrapers"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Coporate Events</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="img/weeding events.webp"
+              class="card-img-top categories_img"
+              alt="Los Angeles Skyscrapers"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Weeding Events</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="img/Birthday Events.webp"
+              class="card-img-top categories_img"
+              alt="Palm Springs Road"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Birthday Events</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 pb-0 pb-lg-5">
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="img/international Events.webp"
+              class="card-img-top categories_img"
+              alt="Skyscrapers"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">International Events</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="img/theme Events.webp"
+              class="card-img-top categories_img"
+              alt="Los Angeles Skyscrapers"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Theme Parties</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="img/theme Events.webp"
+              class="card-img-top categories_img"
+              alt="Palm Springs Road"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Celebrity Events</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 pb-0 pb-lg-5">
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="img/Awards Party.webp"
+              class="card-img-top categories_img"
+              alt="Skyscrapers"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Awards Events</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="https://i.pinimg.com/originals/2a/a3/ef/2aa3ef5d4bc3c041da5198f7b7a89a12.jpg"
+              class="card-img-top categories_img"
+              alt="Los Angeles Skyscrapers"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Musical Night</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="https://i.pinimg.com/originals/e5/10/71/e51071bdda5762ede7b2d091440e1a09.jpg"
+              class="card-img-top categories_img"
+              alt="Palm Springs Road"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Spiritual Events</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------------------- Exclusive Designs----------------------------------------- -->
+
+    <div class="mb-5 mb-lg-0 py-5" style="background-color: #f2f1ef">
+      <p class="text-uppercase text-center fs-1 pb-5 Courgette fw-bolder">
+        Corporate Events
+      </p>
+      <section
+        class="content-section container"
+        style="background-color: #f2f1ef; justify-content: space-between"
+      >
+        <div class="row align-items-center">
+          <!-- Image Section -->
+          <div class="col-lg-6 col-md-6 col-12 mb-4 mb-md-0">
+            <div class="image-section">
+              <img src="img/corporate 1.webp" alt="Flowers" />
+            </div>
+          </div>
+          <!-- Text Section -->
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="text-content">
+              <!-- <p class="text-uppercase text-muted Courgette fw-bolder">Corporate Events</p> -->
+              <h2 class="Courgette">
+                Drishti: Excellence in Exclusive Event Management Services
+              </h2>
+              <p class="Courgette" style="margin-bottom: 8%">
+                Drishti specializes in exclusive event management services in
+                India and abroad, excelling in organizing corporate events such
+                as seminars, product launches, brand promotions, and
+                exhibitions. Their expert team ensures personalized,
+                client-focused solutions, delivering highly acclaimed services,
+                particularly in and around Delhi. Their professionalism and
+                attention to detail have earned widespread appreciation and
+                fueled their growth.
+              </p>
+              <a href="#" class="btn-custom" style="background-color: #a3ad6f"
+                >Visit Gallery</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!------------------------------------------- Testimonial Design----------------------------------------- -->
+
+    <section class="testimonial-section">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide" style="background-color: #f2f1ef">
+            <img
+              src="img/testimonial/testimonial 2.webp"
+              alt="Author"
+              class="author-image"
+              style="width: 10%; border-radius: 50%; position: static"
+            />
+            <div class="testimonial-container">
+              <p class="testimonial-quote">
+                "Exceptional service and stunning floral arrangements. Highly
+                recommended!"
+              </p>
+              <h5 class="testimonial-author">Jessica & Ryan, Chicago</h5>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide" style="background-color: #f2f1ef">
+            <img
+              src="img/testimonial/testimonial 2.webp"
+              alt="Author"
+              class="author-image"
+              style="width: 10%; border-radius: 50%; position: static"
+            />
+            <div class="testimonial-container">
+              <p class="testimonial-quote">
+                "Exceptional service and stunning floral arrangements. Highly
+                recommended!"
+              </p>
+              <h5 class="testimonial-author">Jessica & Ryan, Chicago</h5>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide" style="background-color: #f2f1ef">
+            <img
+              src="img/testimonial/testimonial 2.webp"
+              alt="Author"
+              class="author-image"
+              style="width: 10%; border-radius: 50%; position: static"
+            />
+            <div class="testimonial-container">
+              <p class="testimonial-quote">
+                "Exceptional service and stunning floral arrangements. Highly
+                recommended!"
+              </p>
+              <h5 class="testimonial-author">Jessica & Ryan, Chicago</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Navigation -->
+        <div class="swiper-button-next" style="font-size: 10px"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!------------------------------------------- Article Section----------------------------------------- -->
+    <div class="text-center mt-5 mt-lg-5 mb-4 mb-lg-3">
+      <h3 class="Courgette">Articles from the Blog</h3>
+      <h3 class="Courgette">BLOG</h3>
+      <img src="img/welcome.webp" />
+    </div>
+
+    <div class="text-center justify-content-center container mb-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 pb-0 pb-lg-5">
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="img/Article/article 1.webp"
+              class="card-img-top"
+              alt="Skyscrapers"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Flower Decor</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="img/Article/article 2.webp"
+              class="card-img-top"
+              alt="Los Angeles Skyscrapers"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Love Balloons</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img
+              src="img/Article/article 2.webp"
+              class="card-img-top"
+              alt="Palm Springs Road"
+            />
+            <div class="card-body">
+              <h5 class="card-title Courgette">Vintage Metal Cake Stand</h5>
+              <div class="addtocart text-white">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------------------- banner Section----------------------------------------- -->
+    <div class="overlay"></div>
+    <div class="content">
+      <!-- <img src="img/banner.webp"/> -->
+      <h1 class="Courgette">Let Us Make Your Wedding Flawless</h1>
+      <button>Send Request</button>
+    </div>
+
+    <div class="card-container" id="cards-container"></div>
+
+    <!------------------------------------------- Packages Section----------------------------------------- -->
+
+    <div class="text-center" style="margin-top: 5%; margin-bottom: 2%">
+      <h3 class="Courgette">Our Events Plans</h3>
+      <h3 class="">PRICES</h3>
+      <img src="img/welcome.webp" />
+    </div>
+
+    <div class="packages-container container">
+      <div class="packages-card">
+        <img src="img/Packages/packges 1.webp" alt="Bouquets" />
+        <div class="packages-content">
+          <h3 class="Courgette">Bouquets</h3>
+          <br />
+          <ul>
+            <li>Bridal Bouquets</li>
+            <hr />
+            <li>Bridesmaids’ Bouquets</li>
+            <hr />
+            <li>Corsages</li>
+            <hr />
+            <li>Boutonnieres</li>
+            <hr />
           </ul>
-          <a class="text-decoration-none" href="booknow.html">
-            <div class="book_now">
-              <h5 class="text-white mt-4">Book now</h5>
-            </div>
+          <p class="price">from <strong>$399.00</strong></p>
+          <button>Order Now</button>
+        </div>
+      </div>
+
+      <div class="packages-card">
+        <img src="img/Packages/packges 2.webp" alt="Bouquets" />
+        <div class="packages-content">
+          <h3 class="Courgette">Ceremony+ Bouquets</h3>
+          <br />
+          <ul>
+            <li>Bride's & Bridesmaids’ Bouquets</li>
+            <hr />
+            <li>Corsages & Boutonnieres</li>
+            <hr />
+            <li>Ceremony Main Altar</li>
+            <hr />
+            <li>Aisle Pew Markers</li>
+            <hr />
+          </ul>
+          <p class="price">from <strong>$799.00</strong></p>
+          <button>Order Now</button>
+        </div>
+      </div>
+
+      <div class="packages-card">
+        <img src="img/Packages/packges 3.webp" alt="Bouquets" />
+        <div class="packages-content">
+          <h3 class="Courgette">Full Package</h3>
+          <br />
+          <ul>
+            <li>Bride's & Bridesmaids’ Bouquets</li>
+            <hr />
+            <li>Corsages & Boutonnieres</li>
+            <hr />
+            <li>Ceremony Decoration</li>
+            <hr />
+            <li>Tables & Cake Decoration</li>
+            <hr />
+          </ul>
+          <p class="price">from <strong>$999.00</strong></p>
+          <button>Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------------------- Submit section----------------------------------------- -->
+
+    <div class="header-section">
+      <h2>Stay Tuned with Updates!</h2>
+      <div class="form-container">
+        <input type="email" placeholder="Enter Your Email" />
+        <button>SUBMIT</button>
+      </div>
+    </div>
+
+    <div class="images-section" style="margin-bottom: 5%">
+      <img src="img/gallery 1.webp" alt="Event Image 1" />
+      <img src="img/gallery 2.webp" alt="Event Image 3" />
+      <img src="img/gallery 3.webp" alt="Event Image 2" />
+      <img src="img/gallery 4.webp" alt="Event Image 4" />
+    </div>
+
+    <!------------------------------------------- Footer Section----------------------------------------- -->
+
+    <!-- Footer -->
+    <footer
+      class="text-center text-lg-start text-muted"
+      style="background-color: #d4c4b5"
+    >
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-white">
+            <i class="fab fa-facebook-f"></i>
           </a>
-
+          <a href="" class="me-4 text-white">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-white">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-white">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-white">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-white">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
-      </div>
-    </div>
-  </nav>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
 
-  <!-- navbar Start -->
-
-
-
-  <!-- Carousel Start -->
-
-  <div id="carouselExampleDark" class="carousel carousel-dark slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://wallpaperaccess.com/full/3732122.jpg" class="d-block w-100 carousel_img  " alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="text-white fs-2 ">DRISHTI EVENTS SERVICES</h5>
-          <p class="text-white fs-2 Courgette fw-bolder ">Drishti Events Services is a full-service event management
-            company in New Delhi dedicated to quality and excellence</p>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="https://wallpapercave.com/wp/wp7488400.jpg" class="d-block w-100 carousel_img" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="text-white fs-2 ">CORPORATES MEETINGS</h5>
-          <p class=" text-white fs-2  text-white Courgette">The Drishti Event Services has been the driving force behind
-            some of the
-            greatest corporate,institutional and private events across whole india.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/img/carousel_image.webp" class="d-block w-100 carousel_img" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-
-  <!------------------------------------------- categories Start----------------------------------------- -->
-  <div class="text-center  mt-5  mt-lg-5 mb-4 mb-lg-3">
-    <h3 class="Courgette">Let's Plan Your Perfect Wedding</h3>
-    <!-- <h3 class="Courgette">welcome</h3> -->
-    <img src="img/welcome.webp">
-  </div>
-
-
-  <div class="container py-sm-0 py-lg-5">
-    <div class="row text-center">
-      <!-- Card 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <img
-            src="https://web.archive.org/web/20180202204828im_/http://drishtieventservices.com/webboxadmin/uploads/our_services/17180_1.jpg"
-            class="card-img-top" alt="Bouquets & Style">
-          <div class="card-body">
-            <h5 class="card-title text-muted Courgette fw-bold">HALDI CEREMONY DECORATION</h5>
-            <a href="#" class="btn btn-outline-secondary card_btn">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <img
-            src="https://web.archive.org/web/20180519125213im_/http://drishtieventservices.com/webboxadmin/uploads/our_services/29826_2.jpg"
-            class="card-img-top" alt="Wedding Planning">
-          <div class="card-body">
-            <h5 class="card-title text-muted Courgette fw-bold">MEHENDI CEREMONY DECORATION</h5>
-            <a href="#" class="btn btn-outline-secondary card_btn">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <img
-            src="https://web.archive.org/web/20180424181026im_/http://drishtieventservices.com/webboxadmin/uploads/birthday/16650_wed3.jpg"
-            class="card-img-top" alt="Catering & Decoration">
-          <div class="card-body">
-            <h5 class="card-title text-muted Courgette fw-bold">Catering & Decoration</h5>
-            <a href="#" class="btn btn-outline-secondary card_btn">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- About Start -->
-
-  <section class="about-us">
-    <div class="container about_main_div">
-      <div class="row align-items-center">
-        <!-- Left Content -->
-        <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0 order-2 order-lg-1">
-          <!-- <p class="text-uppercase text-muted small mb-2 Courgette">About Us</p> -->
-          <h1 class="display-5 Courgette">About Us</h1>
-          <div class=" " style="margin-top: 6%; margin-bottom: 6%;">
-            <img src="img/welcome.webp">
-          </div>
-          <p class="mb-5">
-            Drishti is a well established Event management Company with the strategy to establish an exciting and
-            inspiring environment around the audience so that our guests or prospective clients experience cutting edge
-            art direction of every visual element - We lift the impact of each and every event, Meetings, Incentives,
-            Conferencing, Exhibitions or Branding Portfolio to new level of success and unparalleled identity.
-          </p>
-          <a href="About.html" class="btn_second btn-outline-secondary px-4 py-3 mt-5">More About Us</a>
-        </div>
-  
-        <!-- Right Swiper Section -->
-        <div class="col-lg-6 text-end order-1 order-lg-2">
-          <div class="swiper-container w-100">
-            <div class="swiper-wrapper">
-              <!-- Slide 1 -->
-              <div class="swiper-slide w-100  swiper-slideee">
-                <img class="w-100" src="img/birthday_image.webp" alt="Wedding Arch 1">
-              </div>
-              <!-- Slide 2 -->
-              <div class="swiper-slide w-100   swiper-slideee">
-                <img src="img/About/about-1.jpg" alt="Wedding Arch 2">
-              </div>
-              <!-- Slide 3 -->
-              <div class="swiper-slide w-100   swiper-slideee">
-                <img src="img/slide 3.webp" alt="Wedding Arch 3">
-              </div>
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">Drishti Events Logo</h6>
+              <p class="Courgette text-white">
+                Drishti Event Services is a special event planning, decorating
+                and styling firm based in the capital city, New Delhi.
+              </p>
             </div>
-            <!-- Navigation Buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">QUICK LInks</h6>
+              <p>
+                <a href="#!" class="text-white text-decoration-none">
+                  <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                  About Us</a
+                >
+              </p>
+              <p>
+                <a href="#!" class="text-white text-decoration-none">
+                  <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                  Services</a
+                >
+              </p>
+              <p>
+                <a href="#!" class="text-white text-decoration-none">
+                  <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                  Contact</a
+                >
+              </p>
+              <p>
+                <a href="#!" class="text-white text-decoration-none">
+                  <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                  Book Now</a
+                >
+              </p>
+              <p>
+                <a href="#!" class="text-white text-decoration-none">
+                  <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                  Privacy Policy</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Services</h6>
+              <p>
+                <a href="#!" class="text-white text-decoration-none"></a>
+              </p>
+              <p>
+                <a href="#!" class="text-decoration-none text-white">
+                  <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                  Settings</a
+                >
+              </p>
+              <p>
+                <a href="#!" class="text-white text-decoration-none">
+                  <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                  Orders</a
+                >
+              </p>
+              <p>
+                <a href="#!" class="text-white text-decoration-none">
+                  <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                  Help</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p class="text-white">
+                <i class="fas fa-home me-3 text-black"></i> A-88 Sec -4 Noida
+              </p>
+              <p class="text-white">
+                <i class="fas fa-envelope me-3 text-black"></i>
+                info@example.com
+              </p>
+              <p class="text-white">
+                <i class="fas fa-phone me-3 text-black"></i> + 01 234 567 88
+              </p>
+              <p class="text-white">
+                <i class="fas fa-print me-3 text-black"></i> + 01 234 567 89
+              </p>
+            </div>
+            <!-- Grid column -->
           </div>
+          <!-- Grid row -->
         </div>
-      </div>
-    </div>
-  </section>
-  
+      </section>
+      <!-- Section: Links  -->
+    </footer>
 
-
-
-  <!------------------------------------------- Delievry Start----------------------------------------- -->
-
-
-
-  <div class="features-container d-block d-sm-flex  container mt-sm-2 mt-lg-5  mb-sm-2 mb-lg-1 mt-3">
-    <div class="feature-item  ">
-      <div class="icon-circle">
-        <i class="fa-solid fa-truck"></i>
-      </div>
-      <h3>Free Delivery</h3>
-      <p>on every order, during the same day</p>
-    </div>
-    <div class="feature-item  ">
-      <div class="icon-circle">
-        <i class="fa-solid fa-hands-bound"></i>
-      </div>
-      <h3>Hand – Tied</h3>
-      <p>bouquets and beautiful plants</p>
-    </div>
-    <div class="feature-item  ">
-      <div class="icon-circle ">
-        <i class="bi bi-flower2"></i>
-      </div>
-      <h3>Exclusive Design</h3>
-      <p>by the best florist from NYC</p>
-    </div>
-  </div>
-
-  <!------------------------------------------- Shop Latest Styles----------------------------------------- -->
-
-
-  <div class="text-center  mt-5 pt-3  mt-lg-5 mb-4 mb-lg-3 ">
-    <h3 class="Courgette"> Our Servives</h3>
-    <!-- <h3 class="Courgette">shop</h3> -->
-    <img src="img/welcome.webp">
-  </div>
-  <div class="text-center justify-content-center container mb-5">
-    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 pb-0 pb-lg-5  ">
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="img/corporate 1.webp" class="card-img-top categories_img" alt="Skyscrapers" />
-          <div class="card-body  ">
-            <h5 class="card-title  Courgette">Coporate Events</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start left">
+            <p>&copy; 2025 Drishti Events. Works. All rights reserved</p>
           </div>
-
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="img/weeding events.webp" class="card-img-top categories_img" alt="Los Angeles Skyscrapers" />
-          <div class="card-body">
-            <h5 class="card-title  Courgette">Weeding Events</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-          </div>
-
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="img/Birthday Events.webp" class="card-img-top categories_img" alt="Palm Springs Road" />
-          <div class="card-body">
-            <h5 class="card-title  Courgette">Birthday Events</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 pb-0 pb-lg-5">
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="img/international Events.webp" class="card-img-top categories_img" alt="Skyscrapers" />
-          <div class="card-body  ">
-            <h5 class="card-title  Courgette">International Events</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-
-          </div>
-
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="img/theme Events.webp" class="card-img-top categories_img" alt="Los Angeles Skyscrapers" />
-          <div class="card-body">
-            <h5 class="card-title  Courgette">Theme Parties</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-          </div>
-
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="img/theme Events.webp" class="card-img-top categories_img" alt="Palm Springs Road" />
-          <div class="card-body">
-            <h5 class="card-title  Courgette">Celebrity Events</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 pb-0 pb-lg-5">
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="img/Awards Party.webp" class="card-img-top categories_img" alt="Skyscrapers" />
-          <div class="card-body  ">
-            <h5 class="card-title  Courgette">Awards Events</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-
-          </div>
-
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="https://i.pinimg.com/originals/2a/a3/ef/2aa3ef5d4bc3c041da5198f7b7a89a12.jpg"
-            class="card-img-top categories_img" alt="Los Angeles Skyscrapers" />
-          <div class="card-body">
-            <h5 class="card-title  Courgette">Musical Night</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-          </div>
-
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="https://i.pinimg.com/originals/e5/10/71/e51071bdda5762ede7b2d091440e1a09.jpg"
-            class="card-img-top categories_img" alt="Palm Springs Road" />
-          <div class="card-body">
-            <h5 class="card-title  Courgette">Spiritual Events</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-
-
-  <!------------------------------------------- Exclusive Designs----------------------------------------- -->
-
-  <div class="mb-5 mb-lg-0 py-5" style="background-color: #f2f1ef;">
-    <p class="text-uppercase text-center fs-1 pb-5 Courgette fw-bolder">Corporate Events</p>
-    <section class="content-section container" style="background-color: #f2f1ef; justify-content: space-between;">
-      <div class="row align-items-center">
-        <!-- Image Section -->
-        <div class="col-lg-6 col-md-6 col-12 mb-4 mb-md-0">
-          <div class="image-section">
-            <img src="img/corporate 1.webp" alt="Flowers" />
-          </div>
-        </div>
-        <!-- Text Section -->
-        <div class="col-lg-6 col-md-6 col-12">
-          <div class="text-content">
-            <!-- <p class="text-uppercase text-muted Courgette fw-bolder">Corporate Events</p> -->
-            <h2 class="Courgette">Drishti: Excellence in Exclusive Event Management Services</h2>
-            <p class="Courgette " style="margin-bottom: 8%;">Drishti specializes in exclusive event management services
-              in India and abroad, excelling in organizing corporate events such as seminars, product launches, brand
-              promotions, and exhibitions. Their expert team ensures personalized, client-focused solutions, delivering
-              highly acclaimed services, particularly in and around Delhi. Their professionalism and attention to detail
-              have earned widespread appreciation and fueled their growth.</p>
-            <a href="#" class=" btn-custom" style="background-color: #a3ad6f;">Visit Gallery</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-
-
-  <!------------------------------------------- Testimonial Design----------------------------------------- -->
-
-
-
-  <section class="testimonial-section">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <!-- Slide 1 -->
-        <div class="swiper-slide" style="background-color: #f2f1ef;">
-          <img src="img/testimonial/testimonial 2.webp" alt="Author" class="author-image"
-            style="width: 10%; border-radius: 50%; position: static;">
-          <div class="testimonial-container">
-            <p class="testimonial-quote">
-              "Exceptional service and stunning floral arrangements. Highly recommended!"
-            </p>
-            <h5 class="testimonial-author">Jessica & Ryan, Chicago</h5>
-          </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="swiper-slide" style="background-color: #f2f1ef;">
-          <img src="img/testimonial/testimonial 2.webp" alt="Author" class="author-image"
-            style="width: 10%; border-radius: 50%; position: static;">
-          <div class="testimonial-container">
-            <p class="testimonial-quote">
-              "Exceptional service and stunning floral arrangements. Highly recommended!"
-            </p>
-            <h5 class="testimonial-author">Jessica & Ryan, Chicago</h5>
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="swiper-slide" style="background-color: #f2f1ef;">
-          <img src="img/testimonial/testimonial 2.webp" alt="Author" class="author-image"
-            style="width: 10%; border-radius: 50%; position: static;">
-          <div class="testimonial-container">
-            <p class="testimonial-quote">
-              "Exceptional service and stunning floral arrangements. Highly recommended!"
-            </p>
-            <h5 class="testimonial-author">Jessica & Ryan, Chicago</h5>
-          </div>
-        </div>
-      </div>
-      <!-- Pagination -->
-      <div class="swiper-pagination"></div>
-      <!-- Navigation -->
-      <div class="swiper-button-next" style="font-size: 10px;"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </section>
-
-
-  <!------------------------------------------- Article Section----------------------------------------- -->
-  <div class="text-center   mt-5  mt-lg-5 mb-4 mb-lg-3">
-    <h3 class="Courgette">Articles from the Blog</h3>
-    <h3 class="Courgette">BLOG</h3>
-    <img src="img/welcome.webp">
-  </div>
-
-
-  <div class="text-center justify-content-center container mb-5">
-    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 pb-0 pb-lg-5  ">
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="img/Article/article 1.webp" class="card-img-top" alt="Skyscrapers" />
-          <div class="card-body  ">
-            <h5 class="card-title  Courgette">Flower Decor</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="img/Article/article 2.webp" class="card-img-top" alt="Los Angeles Skyscrapers" />
-          <div class="card-body">
-            <h5 class="card-title  Courgette">Love Balloons</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0">
-          <img src="img/Article/article 2.webp" class="card-img-top" alt="Palm Springs Road" />
-          <div class="card-body">
-            <h5 class="card-title  Courgette">Vintage Metal Cake Stand</h5>
-            <div class="addtocart text-white">Book Now <i class="fa-solid fa-arrow-right"></i></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!------------------------------------------- banner Section----------------------------------------- -->
-  <div class="overlay"></div>
-  <div class="content ">
-    <!-- <img src="img/banner.webp"/> -->
-    <h1 class="Courgette">Let Us Make Your Wedding Flawless</h1>
-    <button>Send Request</button>
-  </div>
-
-
-
-
-  <div class="card-container" id="cards-container"></div>
-
-  <!------------------------------------------- Packages Section----------------------------------------- -->
-
-  <div class="text-center " style="margin-top: 5%; margin-bottom: 2%;">
-    <h3 class="Courgette">Our Events Plans</h3>
-    <h3 class="">PRICES</h3>
-    <img src="img/welcome.webp">
-  </div>
-
-  <div class="packages-container container">
-    <div class="packages-card">
-      <img src="img/Packages/packges 1.webp" alt="Bouquets">
-      <div class="packages-content">
-        <h3 class="Courgette">Bouquets</h3>
-        <br>
-        <ul>
-          <li>Bridal Bouquets</li>
-          <hr />
-          <li>Bridesmaids’ Bouquets</li>
-          <hr />
-          <li>Corsages</li>
-          <hr />
-          <li>Boutonnieres</li>
-          <hr />
-        </ul>
-        <p class="price">from <strong>$399.00</strong></p>
-        <button>Order Now</button>
-      </div>
-    </div>
-
-    <div class="packages-card">
-      <img src="img/Packages/packges 2.webp" alt="Bouquets">
-      <div class="packages-content">
-        <h3 class="Courgette">Ceremony+ Bouquets</h3>
-        <br>
-        <ul>
-          <li>Bride's & Bridesmaids’ Bouquets</li>
-          <hr />
-          <li>Corsages & Boutonnieres</li>
-          <hr />
-          <li>Ceremony Main Altar</li>
-          <hr />
-          <li>Aisle Pew Markers</li>
-          <hr />
-        </ul>
-        <p class="price">from <strong>$799.00</strong></p>
-        <button>Order Now</button>
-      </div>
-    </div>
-
-    <div class="packages-card">
-      <img src="img/Packages/packges 3.webp" alt="Bouquets">
-      <div class="packages-content">
-        <h3 class="Courgette">Full Package</h3>
-        <br>
-        <ul>
-          <li>Bride's & Bridesmaids’ Bouquets</li>
-          <hr />
-          <li>Corsages & Boutonnieres</li>
-          <hr />
-          <li>Ceremony Decoration</li>
-          <hr />
-          <li>Tables & Cake Decoration</li>
-          <hr />
-        </ul>
-        <p class="price">from <strong>$999.00</strong></p>
-        <button>Order Now</button>
-      </div>
-    </div>
-  </div>
-
-
-  <!------------------------------------------- Submit section----------------------------------------- -->
-
-  <div class="header-section">
-    <h2>Stay Tuned with Updates!</h2>
-    <div class="form-container">
-      <input type="email" placeholder="Enter Your Email">
-      <button>SUBMIT</button>
-    </div>
-  </div>
-
-  <div class="images-section" style="margin-bottom: 5%;">
-    <img src="img/gallery 1.webp" alt="Event Image 1">
-    <img src="img/gallery 2.webp" alt="Event Image 3">
-    <img src="img/gallery 3.webp" alt="Event Image 2">
-    <img src="img/gallery 4.webp" alt="Event Image 4">
-  </div>
-
-
-  <!------------------------------------------- Footer Section----------------------------------------- -->
-
-
-  <!-- Footer -->
-  <footer class="text-center text-lg-start  text-muted" style="background-color: #d4c4b5;">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-white">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-white">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-white">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-white">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-white">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-white">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Drishti Events Logo
-            </h6>
-            <p class="Courgette text-white">
-              Drishti Event Services is a special event planning, decorating and styling firm based in the capital city,
-              New Delhi.
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              QUICK LInks
-            </h6>
+          <div class="col-md-6 text-center text-md-end right">
             <p>
-              <a href="#!" class="text-white text-decoration-none"> <i class="fa fa-angle-double-right"
-                  aria-hidden="true"></i>
-                About Us</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white  text-decoration-none "> <i class="fa fa-angle-double-right"
-                  aria-hidden="true"></i>
-                Services</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white  text-decoration-none "> <i class="fa fa-angle-double-right"
-                  aria-hidden="true"></i>
-                Contact</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white  text-decoration-none "> <i class="fa fa-angle-double-right"
-                  aria-hidden="true"></i>
-                Book Now</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white  text-decoration-none "> <i class="fa fa-angle-double-right"
-                  aria-hidden="true"></i>
-                Privacy Policy</a>
+              Designed and Developed by
+              <a href="#">Kanak Drishti Infotech</a>
             </p>
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4 ">
-              Services
-            </h6>
-            <p>
-              <a href="#!" class="text-white  text-decoration-none "></a>
-            </p>
-            <p>
-              <a href="#!" class="  text-decoration-none  text-white"> <i class="fa fa-angle-double-right"
-                  aria-hidden="true"></i>
-                Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white  text-decoration-none "> <i class="fa fa-angle-double-right"
-                  aria-hidden="true"></i>
-                Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white  text-decoration-none "> <i class="fa fa-angle-double-right"
-                  aria-hidden="true"></i>
-                Help</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p class="text-white"><i class="fas fa-home me-3  text-black"></i> A-88 Sec -4 Noida</p>
-            <p class="text-white">
-              <i class="fas fa-envelope me-3 text-black"></i>
-              info@example.com
-            </p>
-            <p class="text-white"><i class="fas fa-phone me-3 text-black"></i> + 01 234 567 88</p>
-            <p class="text-white"><i class="fas fa-print me-3 text-black"></i> + 01 234 567 89</p>
-          </div>
-          <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-      </div>
-    </section>
-    <!-- Section: Links  -->
-
-
-  </footer>
-
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-center text-md-start left">
-          <p>&copy; 2025 Drishti Events. Works. All rights reserved</p>
-        </div>
-        <div class="col-md-6 text-center text-md-end right">
-          <p>
-            Designed and Developed by
-            <a href="#">Kanak Drishti Infotech</a>
-          </p>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
+    <script src="js/bootstrap.bundle.min.js"></script>
 
-
-
-
-
-
-  <script src="js/bootstrap.bundle.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script>
-    // Initialize Swiper
-    document.addEventListener('DOMContentLoaded', function () {
-      new Swiper('.swiper-container', {
-        loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-          delay: 3000, // Auto-slide every 3 seconds
-        },
-        effect: 'slide',
-        grabCursor: true,
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      // Initialize Swiper
+      document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".swiper-container", {
+          loop: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          autoplay: {
+            delay: 3000, // Auto-slide every 3 seconds
+          },
+          effect: "slide",
+          grabCursor: true,
+        });
       });
-    });
-  </script>
-  <script src="Data.js"></script>
-</body>
-
+    </script>
+    <script src="Data.js"></script>
+  </body>
 </html>
