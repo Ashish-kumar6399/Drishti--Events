@@ -902,15 +902,12 @@ hr {
 
   }
 }
-
+/* 
 .swiper-slide img {
   width: 100%;
-  /* Ensures the image fills the slide width */
   height: auto;
-  /* Maintains aspect ratio */
   object-fit: cover;
-  /* Ensures the image scales properly */
-}
+} */
 
 /* 
 .book_now{
@@ -1014,3 +1011,14 @@ hr {
     display: none;
   }
 }
+
+.carousel-control-next-icon,.carousel-control-prev-icon{
+  background-color: black;
+  border-radius: 20px;
+  height: 35px;
+}
+.fa-angle-double-right{
+  color: white;
+}
+
+
