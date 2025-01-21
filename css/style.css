@@ -122,6 +122,10 @@
   /* Subtle hover effect */
 }
 
+.navbar-nav .nav-link{
+  color: black;
+}
+
 
 /*----------------------------------- crousel section---------------------------- */
 
@@ -506,94 +510,97 @@ section.about-us {
 
 
 /* <!------------------------------------------- Testimonial design----------------------------------------- --> */
-
+/* Overall Layout */
 .testimonial-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40vh;
+  min-height: 60vh;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
 }
 
 .swiper-container {
   width: 80%;
   max-width: 900px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+  padding: 40px;
+  text-align: center;
   background: #fefefe;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Author Image Container */
+.author-image-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  border: 4px solid #d3b9a3;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.swiper-wrapper {
-  text-align: center;
+.author-image-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.swiper-slidee {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+/* Author Image */
+.author-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
 }
 
+.author-image-container:hover .author-image {
+  opacity: 0.9;
+}
+
+/* Quote Styling */
 .testimonial-quote {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-style: italic;
-  color: #444;
+  color: #333;
   margin-bottom: 20px;
-  text-align: center;
   line-height: 1.6;
 }
 
 .testimonial-author {
-  font-size: 1rem;
-  color: #666;
-  margin-top: 5px;
+  font-size: 1.2rem;
+  color: #777;
+  font-weight: bold;
 }
 
-
-
-
-
-@media screen and (max-width: 769px) {}
-
-.testimonial-container {
-  background-color: #fefefe;
-  border-radius: 10px;
-  padding: 50px 20px 20px;
-  position: relative;
-  z-index: 0;
-  background-color: #f2f1ef;
-
-}
-
-.swiper-pagination {
-  margin-top: 10px;
-}
-
-.swiper-pagination-bullet {
-  background: #d3b9a3;
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background: #8e9f73;
-}
-
+/* Navigation Buttons */
 .swiper-button-next,
 .swiper-button-prev {
   background-color: #d3b9a3;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
+  border-radius: 50%;
+  color: #fff;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .swiper-button-next:hover,
@@ -601,31 +608,57 @@ section.about-us {
   background-color: #b79b83;
 }
 
-.swiper-button-prev {
-  left: -20px;
-}
-
 .swiper-button-next {
-  right: -20px;
+  right: -25px;
 }
 
-
-.testimonial_img {
-
-  width: 10%;
-  /* height: 91%; */
-  border-radius: 50%
+.swiper-button-prev {
+  left: -25px;
 }
 
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-  content: 'next';
+/* Pagination */
+.swiper-pagination {
+  margin-top: 20px;
 }
 
+.swiper-pagination-bullet {
+  background: #d3b9a3;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+}
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 20px important;
+.swiper-pagination-bullet-active {
+  background: #8e9f73;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .swiper-container {
+    width: 90%;
+  }
+
+  .testimonial-quote {
+    font-size: 1.2rem;
+  }
+
+  .author-image-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+.client_heading{
+  padding-top: 7rem;
+  margin-bottom: 0rem;
 }
 
 /* <!------------------------------------------- banner design----------------------------------------- --> */

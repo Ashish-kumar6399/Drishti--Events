@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/wedding-events.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- swiper js link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+    <!-- Bootstra[ Icons link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image {
+            flex: 1 1 45%;
+            max-width: 500px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-content {
+            flex: 1 1 45%;
+            text-align: left;
+        }
+
+        .stylish-heading {
+            font-size: 2.5rem;
+            color: #2a3f54;
+            font-weight: 700;
+        }
+
+        .about-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+            margin-top: 10px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e55b50;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+                flex-direction: column-reverse
+            }
+
+            .about-content {
+                text-align: center;
+            }
+
+            .stylish-heading {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <style>
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-family: swiper-icons;
+            font-size: 15px !important;
+            text-transform: none !important;
+            letter-spacing: 0;
+            font-variant: initial;
+            line-height: 1;
+            color: black;
+        }
+
+        .swiper-button-prev,
+        .swiper-rtl .swiper-button-next {
+            color: black;
+        }
+
+        @media (max-width: 576px) {
+            .dropdown-item::before {
+                transform: rotate(-90deg);
+            }
+
+        }
+
+        .navbar-expand-md .navbar-nav .dropdown-menu {
+            background-color: #d4c4b5;
+        }
+
+        /* caroousel image  */
+        .weddingcarousel_img {
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 768px) {
+            .weddingcarousel_img {
+                height: 40vh;
+                object-fit: cover;
+            }
+        }
+
+        .valentine-image {
+            flex: 1 1 45%;
+            max-width: 500px;
+        }
+
+        .valentine-image img {
+            width: 100%;
+            height: 10%;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .valentine-image img:hover {
+            /* transform: scale(1.05); */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- navbar Start -->
+    <nav class="navbar navbar-expand-md" style="background-color: #d4c4b5">
+		<div class="container header_main_div">
+		 <a href="../index.html"> <div class="d-lg-none d-md-none">
+			<img src="/img/logo.webp" alt="Logo" />
+		  </div> </a>
+		  <button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="offcanvas"
+			data-bs-target="#offcanvasNavbar"
+			aria-controls="offcanvasNavbar"
+		  >
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div
+			class="offcanvas offcanvas-end"
+			tabindex="-1"
+			id="offcanvasNavbar"
+			aria-labelledby="offcanvasNavbarLabel"
+		  >
+			<div class="offcanvas-header">
+			  <button
+				type="button"
+				class="btn-close"
+				data-bs-dismiss="offcanvas"
+				aria-label="Close"
+			  ></button>
+			</div>
+  
+			<div class="offcanvas-body">
+			  <a href="../index.html">
+			  <div>
+				<img src="/img/logo.webp" alt="Logo" />
+			  </div>
+			</a>
+			  <ul class="navbar-nav justify-content-center flex-grow-1 mt-3">
+				<li class="nav-item fw-bolder">
+				  <a class="nav-link  " href="../index.html">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="../About.html">About</a>
+				</li>
+				
+  
+				<div class="dropdown fw-bolder" style="background-color: #d4c4b5;margin-top: 2px;">
+				  <button
+					class="btn fw-bold dropdown-toggle border-0"
+					type="button"
+					data-bs-toggle="dropdown"
+					data-bs-auto-close="outside"
+					aria-expanded="false"
+				  >
+					SERVICES
+				  </button>
+				  <ul class="dropdown-menu">
+					<li class="dropend">
+					  <a
+						class="dropdown-item dropdown-toggle"
+						data-bs-toggle="dropdown"
+						href="#"
+						>Special Events</a
+					  >
+					  <ul class="dropdown-menu">
+						<li><a class="dropdown-item text-black" href="special-events/valentine-day.html">Valentine Day</a></li>
+					   
+					  </ul>
+					</li>
+					<li class="dropend"><a class="dropdown-item dropdown-toggle"
+					  data-bs-toggle="dropdown"
+					  href="">Standard Events</a>
+					  
+					  <ul class="dropdown-menu">
+						<li class=""><a class="dropdown-item text-black" href="../standard-events/corporate-events.html">Wedding Events</a></li>
+						<li><a class="dropdown-item text-black" href="../standard-events/corporate-events.html">Corporate Events</a></li>
+						<li><a class="dropdown-item text-black" href="../standard-events/birthday.html">Birthday Events</a></li>
+						<!-- <li><a class="dropdown-item text-black" href="standard-events/international-acts.html">International Acts</a></li> -->
+						<li><a class="dropdown-item text-black" href="../standard-events/Theme-parties.html">Theme Parties</a></li>
+						<li><a class="dropdown-item text-black" href="../standard-events/celebrity-events.html">Celebrity Events</a></li>
+						<li><a class="dropdown-item text-black" href="../standard-events/Award-ceremony.html">Award Ceremony Events</a></li>
+						<li><a class="dropdown-item text-black" href="../standard-events/musical-event.html">Musical Night</a></li>
+						<!-- <li><a class="dropdown-item text-black" href="standard-events/">Special Events</a></li> -->
+					  </ul>
+					</li>
+					<li><a class="dropdown-item" href="#">Social Events</a></li>
+				  </ul>
+				</div>
+  
+				<!-- JavaScript for Submenu -->
+  
+				<li class="nav-item">
+				  <a class="nav-link" href="../contact.html">Contact</a>
+				</li>
+			  </ul>
+			  <a class="text-decoration-none" href="../booknow.html">
+				<div class="book_now">
+				  <h5 class="text-white mt-4">Book now</h5>
+				</div>
+			  </a>
+			</div>
+		  </div>
+		</div>
+	  </nav>
+
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/musical/4.webp" class="d-block w-100 weddingcarousel_img" alt="..." />
+                <!-- <div class="carousel-caption d-none d-md-block">
+			  <h5 class="text-white fs-2">DRISHTI EVENTS SERVICES</h5>
+			  <p class="text-white fs-2 Courgette fw-bolder">
+				Drishti Events Services is a full-service event management company
+				in New Delhi dedicated to quality and excellence
+			  </p>
+			</div> -->
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="../img/musical/1.webp" class="d-block w-100 weddingcarousel_img" alt="..." />
+                <!-- <div class="carousel-caption d-none d-md-block">
+			  <h5 class="text-white fs-2">CORPORATES MEETINGS</h5>
+			  <p class="text-white fs-2 text-white Courgette">
+				The Drishti Event Services has been the driving force behind some
+				of the greatest corporate,institutional and private events across
+				whole india.
+			  </p>
+			</div> -->
+            </div>
+            <div class="carousel-item">
+                <img src="../img/musical/5.webp" class="d-block w-100 weddingcarousel_img" alt="..." />
+                <!-- <div class="carousel-caption d-none d-md-block">
+			  <h5>Third slide label</h5>
+			  <p>Some representative placeholder content for the third slide.</p>
+			</div> -->
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container mt-lg-5 mb-5">
+        <h1 class="mt-5 mb-4 ms-lg-5 stylish-heading text-center">Drishti Musical Events Services</h1>
+
+        <div class="about-section">
+            <div class="about-content me-lg-5">
+                <h1 class="mt-5 mb-4  stylish-heading ">Sufi Events Services</h1>
+
+                <p class="fw-bold about-description">
+                    Drishti is a leading event management company that delivers variety of events and services like Sufi
+                    Nights, on the whole we give an entertainment edge to your event. Drishti assures astounding range
+                    of Sufi artist that add the right twist of performance & talent to make your events more happening,
+                    unique, inspiring and worth remembering.
+                    When we talk about Sufi Music shows, the mind flares to film music but Sufi music show is beyond the
+                    Bollywood music which generally refers to Vocal Music, Instrumental Music, Fusion, Bhajans, Qawwali,
+                    Ghazals, Violin etc. and thereby the persistence of choice among the different age groups. Sufi
+                    Music shows is depend upon the choice and age-group of audience and listeners. </p>
+            </div>
+            <div class="valentine-image">
+                <img src="https://www.adotrip.com/public/images/events/master_images/5e2ea8fec6c1e-Sufi_Festival_Attractions.jpg"
+                    class="d-block w-100 weddingcarousel_img" alt="..." />
+            </div>
+
+            <div class="about-content me-lg-5">
+                <h1 class="mt-5 mb-4  stylish-heading ">Classical Events</h1>
+
+                <p class="fw-bold about-description">
+                    Audience these days are jazzy and they easily connect themselves with music, dance performance and
+                    acts, our experts have maintained the balance of organizing events with heart throbbing Eye-Catching
+                    Classical Dance Shows and Music specifically customized as per the client’s demands.
+                    Once we have full knowledge of the client’s requirements, we’ll put all our efforts in arranging the
+                    finest event management services, adding the right blend of entertainment elements together can
+                    drive the audience crazy and excited throughout the event.
+            </div>
+            <div class="valentine-image">
+                <img src="/img/musical/3.webp" alt="Wedding Services" class="image-hover-effect">
+            </div>
+            <div class="about-content me-lg-5">
+                <h1 class="mt-5 mb-4  stylish-heading ">Rock Music Events</h1>
+
+                <p class="fw-bold about-description">
+                    Drishti, a leading musical night organizer in Delhi, is known for its strong network with top
+                    artists and expertise in hosting grand events. In a competitive industry, the team stays updated to
+                    maintain its market position.
+                </p>
+                <p class="fw-bold about-description">
+                    The company arranges leading artists, musicians, DJs, and international performers, representing both Indian and global talent for unforgettable occasions. Drishti also offers stage decoration, premium sound systems, and advanced lighting solutions.
+
+                    Committed to client satisfaction, Drishti customizes affordable services to meet individual needs, ensuring excellence and timely delivery. Their mission is to provide seamless event management that leaves a lasting impact.
+                    
+                    </p>
+
+                <a href="/booknow.html" class="btn btn-primary mt-3 ms-lg-5">Submit Query</a>
+            </div>
+            <div class="about-image">
+                <img src="https://i.ytimg.com/vi/OWcx9mM-c7s/maxresdefault.jpg" alt="Wedding Services"
+                    class="image-hover-effect">
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------------- Footer Section----------------------------------------- -->
+    <footer
+    class="text-center text-lg-start text-muted"
+    style="background-color: #d4c4b5"
+  >
+    <!-- Section: Social media -->
+    <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-white">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="" class="me-4 text-white">
+          <i class="fab fa-twitter"></i>
+        </a>
+        
+        <a href="" class="me-4 text-white">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-white">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">Drishti Events Logo</h6>
+            <p class="Courgette text-black">
+              Drishti Event Services is a special event planning, decorating
+              and styling firm based in the capital city, New Delhi.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">QUICK LInks</h6>
+            <p>
+              <a href="/About.html" class="text-black text-decoration-none">
+                <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
+                About Us</a
+              >
+            </p>
+            <!-- <p>
+              <a href="!" class="text-black text-decoration-none">
+                <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
+                Services</a
+              >
+            </p> -->
+            <p>
+              <a href="/contact.html" class="text-black text-decoration-none">
+                <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
+                Contact</a
+              >
+            </p>
+            <p>
+              <a href="/booknow.html" class="text-black text-decoration-none">
+                <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
+                Book Now</a
+              >
+            </p>
+            <p>
+              <a href="/privacy-policy.html" class="text-black text-decoration-none">
+                <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
+                Privacy Policy</a
+              >
+            </p>
+            <p>
+              <a href="/terms&conditions.html" class="text-black text-decoration-none">
+                <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
+                Terms & Conditions</a
+              >
+            </p>
+          </div>
+          
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Services</h6>
+            <p>
+              <a href="#" class="text-black text-decoration-none"></a>
+            </p>
+            <p>
+              <a href="../standard-events/corporate-events.html" class="text-decoration-none text-black">
+                <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
+                Corporate Events</a
+              >
+            </p>
+            <p>
+              <a href="../standard-events/wedding-events.html" class="text-black text-decoration-none">
+                <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
+                Weeding Events</a
+              >
+            </p>
+            <p>
+              <a href="../standard-events/birthday.html" class="text-black text-decoration-none">
+                <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
+                Birthday Events</a
+              >
+            </p>
+            <p>
+              <a href="../special-events/valentine-day.html" class="text-black text-decoration-none">
+                <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
+                valentine Day Events</a
+              >
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p class="text-black">
+              <i class="fas fa-home me-3 text-black"></i> A-88 Sec -4 Noida
+            </p>
+            <p class="text-black">
+              <i class="fas fa-envelope me-3 text-black"></i>
+              info@drishtieventservices.com              </p>
+            <p class="text-black">
+              <i class="fas fa-phone me-3 text-black"></i> + 01 234 567 88
+            </p>
+            <p class="text-black">
+              <i class="fas fa-print me-3 text-black"></i> + 01 234 567 89
+            </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  </footer>
+  <a href="https://wa.me/yourwhatsappnumber" target="_blank" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  z-index: 1000;
+">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start left">
+          <p>&copy; 2025 Drishti Events. Works. All rights reserved</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end right">
+          <p>
+            Designed and Developed by
+            <a href="https://kanakdrishtiinfo.com/" target="_blank">Kanak Drishti Infotech</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".swiper-container", {
+                loop: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 3000, // Auto-slide every 3 seconds
+                },
+                effect: "slide",
+                grabCursor: true,
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
