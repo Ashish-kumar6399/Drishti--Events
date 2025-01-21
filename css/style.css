@@ -122,7 +122,7 @@
   /* Subtle hover effect */
 }
 
-.navbar-nav .nav-link{
+.navbar-nav .nav-link {
   color: black;
 }
 
@@ -146,6 +146,20 @@
     height: 60vh;
     object-fit: cover;
   }
+}
+
+@media screen and (min-device-width: 300px) and (max-device-width: 600px) {
+  .carousel_img {
+    height: 30vh;
+    object-fit: cover;
+  }
+}
+
+
+.carousel-caption {
+  background: rgb(0 0 0 / 32%);
+  ;
+
 }
 
 /* Categories section */
@@ -656,7 +670,7 @@ section.about-us {
   }
 }
 
-.client_heading{
+.client_heading {
   padding-top: 7rem;
   margin-bottom: 0rem;
 }
@@ -935,6 +949,7 @@ hr {
 
   }
 }
+
 /* 
 .swiper-slide img {
   width: 100%;
@@ -949,6 +964,30 @@ hr {
 } */
 
 
+.book_now {
+  background-color: #a3ad6f;
+  color: white;
+  text-align: center;
+  padding: 10px 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+@media screen and (min-device-width: 750px) and (max-device-width: 1000px) {
+  .book_now {
+    background-color: #a3ad6f;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+  }
+}
 
 /* Style for the sub-dropdown */
 .dropdown-submenu .dropdown-menu {
@@ -1045,13 +1084,13 @@ hr {
   }
 }
 
-.carousel-control-next-icon,.carousel-control-prev-icon{
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
   background-color: black;
   border-radius: 20px;
   height: 35px;
 }
-.fa-angle-double-right{
+
+.fa-angle-double-right {
   color: white;
 }
-
-
