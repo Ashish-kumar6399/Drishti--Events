@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan your next event with Drishti Events. Submit your event details and let us create unforgettable experiences.">
+  <meta name="keywords" content="event planning, event query form, Drishti Events">
+  <meta name="author" content="Drishti Events">
+  <title>Plan an Event | Drishti Events</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #f6d365, #fda085);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      padding: 30px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #444;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    input, textarea, select, button {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #fd7e14;
+      box-shadow: 0 0 8px rgba(253, 126, 20, 0.4);
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #aaa;
+      font-style: italic;
+    }
+
+    .optional {
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    button {
+      background: linear-gradient(90deg, #f6d365, #fda085);
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 15px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #fda085, #f6d365);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Icons for Inputs */
+    .form-group {
+      position: relative;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+      padding-left: 40px;
+    }
+
+    .form-group i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+      font-size: 1.2rem;
+      pointer-events: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    
+  <div class="container">
+    <h1>Plan Your Event</h1>
+    <p>Fill out the form below, and we’ll help you create unforgettable memories.</p>
+    <form action="submit_event.php" method="POST"> <!-- Adjust action as needed -->
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <i class="fas fa-user"></i>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile *</label>
+        <i class="fas fa-phone"></i>
+        <input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number">
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+      </div>
+      <div class="form-group">
+        <label for="date">Date *</label>
+        <i class="fas fa-calendar-alt"></i>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="location">Location *</label>
+        <i class="fas fa-map-marker-alt"></i>
+        <input type="text" id="location" name="location" required placeholder="Enter event location">
+      </div>
+      <div class="form-group">
+        <label for="company">Company Name <span class="optional">(Optional)</span></label>
+        <i class="fas fa-building"></i>
+        <input type="text" id="company" name="company" placeholder="Enter your company name (if applicable)">
+      </div>
+      <div class="form-group">
+        <label for="event-type">Type of Event *</label>
+        <i class="fas fa-tags"></i>
+        <select id="event-type" name="event_type" required>
+          <option value="" disabled selected>Select event type</option>
+          <option value="wedding">Wedding</option>
+          <option value="corporate">Corporate Event</option>
+          <option value="birthday">Birthday Party</option>
+          <option value="social">Social Gathering</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="requirements">Special Requirements</label>
+        <i class="fas fa-edit"></i>
+        <textarea id="requirements" name="special_requirements" placeholder="Any specific details or requirements"></textarea>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
