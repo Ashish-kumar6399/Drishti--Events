@@ -1,280 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRISHTI EVENT</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/wedding-events.css" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/wedding-events.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
-	<!-- swiper js link -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- Bootstra[ Icons link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
 
-	<!-- Bootstra[ Icons link -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        background-color: #f9f9f9;
+      }
 
-	<style>
-		body {
-			font-family: 'Poppins', sans-serif;
-			color: #333;
-			background-color: #f9f9f9;
-		}
+      .about-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 20px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
 
-		.about-section {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-			gap: 20px;
-			padding: 40px 20px;
-			background-color: #ffffff;
-			border-radius: 15px;
-			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-		}
+      .about-image {
+        flex: 1 1 45%;
+        max-width: 500px;
+      }
 
-		.about-image {
-			flex: 1 1 45%;
-			max-width: 500px;
-		}
+      .about-image img {
+        width: 100%;
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-		.about-image img {
-			width: 100%;
-			border-radius: 15px;
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-		}
+      .about-image img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
 
-		.about-image img:hover {
-			transform: scale(1.05);
-			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-		}
+      .about-content {
+        flex: 1 1 45%;
+        text-align: left;
+      }
 
-		.about-content {
-			flex: 1 1 45%;
-			text-align: left;
-		}
+      .stylish-heading {
+        font-size: 2.5rem;
+        color: #2a3f54;
+        font-weight: 700;
+      }
 
-		.stylish-heading {
-			font-size: 2.5rem;
-			color: #2a3f54;
-			font-weight: 700;
-		}
+      .about-description {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+        margin-top: 10px;
+      }
 
-		.about-description {
-			font-size: 1.1rem;
-			line-height: 1.8;
-			color: #555;
-			text-align: justify;
-			margin-top: 10px;
-		}
+      .btn-primary {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff6f61;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
 
-		.btn-primary {
-			display: inline-block;
-			padding: 10px 20px;
-			background-color: #ff6f61;
-			color: #fff;
-			font-size: 1rem;
-			font-weight: bold;
-			text-decoration: none;
-			border-radius: 25px;
-			transition: background-color 0.3s ease, box-shadow 0.3s ease;
-		}
+      .btn-primary:hover {
+        background-color: #e55b50;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
 
-		.btn-primary:hover {
-			background-color: #e55b50;
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-		}
+      @media (max-width: 768px) {
+        .about-section {
+          flex-direction: column;
+          text-align: center;
+          flex-direction: column-reverse;
+        }
 
-		@media (max-width: 768px) {
-			.about-section {
-				flex-direction: column;
-				text-align: center;
-				flex-direction: column-reverse
-			}
+        .about-content {
+          text-align: center;
+        }
 
-			.about-content {
-				text-align: center;
-			}
+        .stylish-heading {
+          font-size: 2rem;
+        }
+      }
+    </style>
 
-			.stylish-heading {
-				font-size: 2rem;
-			}
-		}
-	</style>
+    <style>
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-family: swiper-icons;
+        font-size: 15px !important;
+        text-transform: none !important;
+        letter-spacing: 0;
+        font-variant: initial;
+        line-height: 1;
+        color: black;
+      }
 
-	<style>
-		.swiper-button-next:after,
-		.swiper-button-prev:after {
-			font-family: swiper-icons;
-			font-size: 15px !important;
-			text-transform: none !important;
-			letter-spacing: 0;
-			font-variant: initial;
-			line-height: 1;
-			color: black;
-		}
+      .swiper-button-prev,
+      .swiper-rtl .swiper-button-next {
+        color: black;
+      }
 
-		.swiper-button-prev,
-		.swiper-rtl .swiper-button-next {
-			color: black;
-		}
+      @media (max-width: 576px) {
+        .dropdown-item::before {
+          transform: rotate(-90deg);
+        }
+      }
 
-		@media (max-width: 576px) {
-			.dropdown-item::before {
-				transform: rotate(-90deg);
-			}
+      .navbar-expand-md .navbar-nav .dropdown-menu {
+        background-color: #d4c4b5;
+      }
 
-		}
+      /* caroousel image  */
+      .weddingcarousel_img {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+      }
 
-		.navbar-expand-md .navbar-nav .dropdown-menu {
-			background-color: #d4c4b5;
-		}
+      @media screen and (max-width: 768px) {
+        .weddingcarousel_img {
+          height: 40vh;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
 
-		/* caroousel image  */
-		.weddingcarousel_img {
-			width: 100%;
-			height: 80vh;
-			object-fit: cover;
-		}
+  <body>
+    <!-- navbar Start -->
+    <nav class="navbar navbar-expand-md" style="background-color: #d4c4b5">
+      <div class="container header_main_div">
+        <a href="../index.html">
+          <div class="d-lg-none d-md-none">
+            <img src="/img/logo.webp" alt="Logo" />
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
 
-		@media screen and (max-width: 768px) {
-			.weddingcarousel_img {
-				height: 40vh;
-				object-fit: cover;
-			}
-		}
-	</style>
+          <div class="offcanvas-body">
+            <a href="../index.html">
+              <div>
+                <img src="/img/logo.webp" alt="Logo" />
+              </div>
+            </a>
+            <ul class="navbar-nav justify-content-center flex-grow-1 mt-3">
+              <li class="nav-item fw-bolder">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../About.html">About</a>
+              </li>
 
-</head>
+              <div
+                class="dropdown fw-bolder"
+                style="background-color: #d4c4b5; margin-top: 2px"
+              >
+                <button
+                  class="btn fw-bold dropdown-toggle border-0"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  SERVICES
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="dropend">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      >Special Events</a
+                    >
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item text-black"
+                          href="../special-events/valentine-day.html"
+                          >Valentine Day</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      href=""
+                      >Standard Events</a
+                    >
 
-<body>
+                    <ul class="dropdown-menu">
+                      <li class="">
+                        <a
+                          class="dropdown-item text-black"
+                          href="../standard-events/wedding-events.html"
+                          >Wedding Events</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-black"
+                          href="../standard-events/corporate-events.html"
+                          >Corporate Events</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-black"
+                          href="../standard-events/birthday.html"
+                          >Birthday Events</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-black"
+                          href="../standard-events/Destination-Event.html"
+                          >Destination Event</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-black"
+                          href="../standard-events/Theme-parties.html"
+                          >Theme Parties</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-black"
+                          href="../standard-events/celebrity-events.html"
+                          >Celebrity Events</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-black"
+                          href="../standard-events/Award-ceremony.html"
+                          >Award Ceremony Events</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-black"
+                          href="../standard-events/musical-event.html"
+                          >Musical Night</a
+                        >
+                      </li>
+                      <!-- <li><a class="dropdown-item text-black" href="standard-events/">Special Events</a></li> -->
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../social-events.html"
+                      >Social Events</a
+                    >
+                  </li>
+                </ul>
+              </div>
 
-	<!-- navbar Start -->
-	<nav class="navbar navbar-expand-md" style="background-color: #d4c4b5">
-		<div class="container header_main_div">
-			<a href="../index.html">
-				<div class="d-lg-none d-md-none">
-					<img src="/img/logo.webp" alt="Logo" />
-				</div>
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-				aria-controls="offcanvasNavbar">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-				aria-labelledby="offcanvasNavbarLabel">
-				<div class="offcanvas-header">
-					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-				</div>
+              <!-- JavaScript for Submenu -->
 
-				<div class="offcanvas-body">
-					<a href="../index.html">
-						<div>
-							<img src="/img/logo.webp" alt="Logo" />
-						</div>
-					</a>
-					<ul class="navbar-nav justify-content-center flex-grow-1 mt-3">
-						<li class="nav-item fw-bolder">
-							<a class="nav-link  " href="../index.html">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="../About.html">About</a>
-						</li>
+              <li class="nav-item">
+                <a class="nav-link" href="../contact.html">Contact</a>
+              </li>
+            </ul>
+            <a class="text-decoration-none" href="../Plan-an-event.html">
+              <div class="book_now">
+                <h5 class="text-white mt-2">PLAN AN EVENT</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-
-						<div class="dropdown fw-bolder" style="background-color: #d4c4b5;margin-top: 2px;">
-							<button class="btn fw-bold dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
-								data-bs-auto-close="outside" aria-expanded="false">
-								SERVICES
-							</button>
-							<ul class="dropdown-menu">
-								<li class="dropend">
-									<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Special
-										Events</a>
-									<ul class="dropdown-menu">
-										<li><a class="dropdown-item text-black"
-												href="../special-events/valentine-day.html">Valentine Day</a></li>
-
-									</ul>
-								</li>
-								<li class="dropend"><a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
-										href="">Standard Events</a>
-
-									<ul class="dropdown-menu">
-										<li class=""><a class="dropdown-item text-black"
-												href="../standard-events/corporate-events.html">Wedding Events</a></li>
-										<li><a class="dropdown-item text-black"
-												href="../standard-events/corporate-events.html">Corporate Events</a>
-										</li>
-										<li><a class="dropdown-item text-black"
-												href="../standard-events/birthday.html">Birthday Events</a></li>
-										<!-- <li><a class="dropdown-item text-black" href="standard-events/international-acts.html">International Acts</a></li> -->
-										<li><a class="dropdown-item text-black"
-												href="../standard-events/Theme-parties.html">Theme Parties</a></li>
-										<li><a class="dropdown-item text-black"
-												href="../standard-events/celebrity-events.html">Celebrity Events</a>
-										</li>
-										<li><a class="dropdown-item text-black"
-												href="../standard-events/Award-ceremony.html">Award Ceremony Events</a>
-										</li>
-										<li><a class="dropdown-item text-black"
-												href="../standard-events/musical-event.html">Musical Night</a></li>
-										<!-- <li><a class="dropdown-item text-black" href="standard-events/">Special Events</a></li> -->
-									</ul>
-								</li>
-								  <li><a class="dropdown-item" href="../social-events.html">Social Events</a></li>
-							</ul>
-						</div>
-
-						<!-- JavaScript for Submenu -->
-
-						<li class="nav-item">
-							<a class="nav-link" href="../contact.html">Contact</a>
-						</li>
-					</ul>
-					<a class="text-decoration-none" href="../Plan-an-event.html">
-						<div class="book_now">
-						  <h5 class="text-white mt-2">PLAN AN EVENT</h5>
-						</div>
-					  </a>
-				</div>
-			</div>
-		</div>
-	</nav>
-
-
-	<div id="carouselExampleDark" class="carousel carousel-dark slide">
-		<div class="carousel-indicators">
-			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-				aria-current="true" aria-label="Slide 1"></button>
-			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-				aria-label="Slide 2"></button>
-			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-				aria-label="Slide 3"></button>
-		</div>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="https://i.pinimg.com/originals/10/7d/b7/107db799e59acdc43e1910410c8f1cc8.jpg"
-					class="d-block w-100 weddingcarousel_img" alt="..." />
-				<!-- <div class="carousel-caption d-none d-md-block">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://i.pinimg.com/originals/10/7d/b7/107db799e59acdc43e1910410c8f1cc8.jpg"
+            class="d-block w-100 weddingcarousel_img"
+            alt="..."
+          />
+          <!-- <div class="carousel-caption d-none d-md-block">
 			  <h5 class="text-white fs-2">DRISHTI EVENTS SERVICES</h5>
 			  <p class="text-white fs-2 Courgette fw-bolder">
 				Drishti Events Services is a full-service event management company
 				in New Delhi dedicated to quality and excellence
 			  </p>
 			</div> -->
-			</div>
-			<div class="carousel-item" data-bs-interval="2000">
-				<img src="../img/weeding/weed.jpg" class="d-block w-100 weddingcarousel_img" alt="..." />
-				<!-- <div class="carousel-caption d-none d-md-block">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="../img/weeding/weed.jpg"
+            class="d-block w-100 weddingcarousel_img"
+            alt="..."
+          />
+          <!-- <div class="carousel-caption d-none d-md-block">
 			  <h5 class="text-white fs-2">CORPORATES MEETINGS</h5>
 			  <p class="text-white fs-2 text-white Courgette">
 				The Drishti Event Services has been the driving force behind some
@@ -282,325 +387,484 @@
 				whole india.
 			  </p>
 			</div> -->
-			</div>
-			<div class="carousel-item">
-				<img src="/img/weeding/weeding 1.webp" class="d-block w-100 weddingcarousel_img" alt="..." />
-				<!-- <div class="carousel-caption d-none d-md-block">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/img/weeding/weeding 1.webp"
+            class="d-block w-100 weddingcarousel_img"
+            alt="..."
+          />
+          <!-- <div class="carousel-caption d-none d-md-block">
 			  <h5>Third slide label</h5>
 			  <p>Some representative placeholder content for the third slide.</p>
 			</div> -->
-			</div>
-		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
-	</div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-	<div class="container mt-lg-5 mb-4">
-		<h1 class="mt-5 mb-4 ms-lg-5 stylish-heading text-center">Drishti Wedding Event Services</h1>
+    <div class="container mt-lg-5 mb-4">
+      <h1 class="mt-5 mb-4 ms-lg-5 stylish-heading text-center">
+        Drishti Wedding Event Services
+      </h1>
+	  <nav
+            style="
+              --bs-breadcrumb-divider: url(
+                &#34;data:image/svg + xml,
+                %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='%236c757d'/%3E%3C/svg%3E&#34;
+              );
+            "
+            aria-label="breadcrumb"
+          >
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Weeding Event Services
+              </li>
+            </ol>
+          </nav>
 
-		<div class="about-section">
-			<div class="about-content me-lg-5">
-				<h1 class="mt-5 mb-4  stylish-heading ">Drishti Wedding Event Services</h1>
-				<!-- breadcrumb-item -->
-				<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-					<ol class="breadcrumb">
-					  <li class="breadcrumb-item"><a href="/">Home</a></li>
-					  <li class="breadcrumb-item active" aria-current="page">Weeding Event Services</li>
-					</ol>
-					</nav>
+      <div class="about-section" >
+        <div class="about-content me-lg-5">
+			
+          <h1 class="mt-5 mb-4 stylish-heading">
+            Drishti Wedding Event Services
+          </h1>
+          <!-- breadcrumb-item -->
+          
 
-				<p class="fw-bold about-description">
-					At Drishti most unexpected trendy as well as classical invitation cards are designed by the wedding
-					planner in India. An unforgettable invitation helps in creating a legendary party that will be
-					remembered by all the invitees. The latest trend in a wedding is organizing and arranging a theme
-					party. Each and every client is unique and the ideas of all the clients are equally respected. So
-					the dream theme of the bride and groom is properly understood and given a proper design for making
-					the wedding a glamorous one. The Drishti organizes the Best Catering Service that are known for
-					providing delicious and sumptuous items. A wide range of menu is provided to select the desired
-					items. Innovative styles of cooking are incorporated and the authenticity of the food is also well
-					maintained. </p>
-			</div>
-			<div class="about-image">
-				<img src="/img/carosel_wedding_image.webp" alt="Wedding Services" class="image-hover-effect">
-			</div>
+          <p class="fw-bold about-description">
+            At Drishti most unexpected trendy as well as classical invitation
+            cards are designed by the wedding planner in India. An unforgettable
+            invitation helps in creating a legendary party that will be
+            remembered by all the invitees. The latest trend in a wedding is
+            organizing and arranging a theme party. Each and every client is
+            unique and the ideas of all the clients are equally respected. So
+            the dream theme of the bride and groom is properly understood and
+            given a proper design for making the wedding a glamorous one. The
+            Drishti organizes the Best Catering Service that are known for
+            providing delicious and sumptuous items. A wide range of menu is
+            provided to select the desired items. Innovative styles of cooking
+            are incorporated and the authenticity of the food is also well
+            maintained.
+          </p>
+        </div>
+        <div class="about-image">
+          <img
+            src="/img/carosel_wedding_image.webp"
+            alt="Wedding Services"
+            class="image-hover-effect"
+          />
+        </div>
 
-			<div class="about-content me-lg-5">
-				<h1 class="mt-5 mb-4  stylish-heading" id="mehendi-event">Mehendi Event</h1>
+        <div class="about-content me-lg-5">
+          <h1 class="mt-5 mb-4 stylish-heading" id="mehendi-event">
+            Mehendi Event
+          </h1>
 
-				<p class="fw-bold about-description">
-					We at DRISHTI believe that the keys to successful wedding, honeymoon planning include organization,
-					prioritization, Hotel Booking, fire-works, execution and wedding gifts. We are high end designer
-					wedding planners and Decorators who can help you with your entire event or select wedding events
-					like just the reception, engagement, Moon entry theme,Mandir theme or the Mehndi function. You are
-					now at right place to get Grand wedding themes, Mehndi & wedding decorations within your budget !
-					Wedding parties tips & arrangement in your finger tips, corporate wedding Management Company. Enjoy
-					the taste of pure entertainment.
-			</div>
-			<div class="about-image">
-				<img src="/img/haldi 1.webp" alt="Wedding Services" class="image-hover-effect">
-			</div>
-			<div class="about-content me-lg-5">
-				<h1 class="mt-5 mb-4  stylish-heading ">Mandap Event</h1>
+          <p class="fw-bold about-description">
+            We at DRISHTI believe that the keys to successful wedding, honeymoon
+            planning include organization, prioritization, Hotel Booking,
+            fire-works, execution and wedding gifts. We are high end designer
+            wedding planners and Decorators who can help you with your entire
+            event or select wedding events like just the reception, engagement,
+            Moon entry theme,Mandir theme or the Mehndi function. You are now at
+            right place to get Grand wedding themes, Mehndi & wedding
+            decorations within your budget ! Wedding parties tips & arrangement
+            in your finger tips, corporate wedding Management Company. Enjoy the
+            taste of pure entertainment.
+          </p>
+        </div>
 
-				<p class="fw-bold about-description">
-					DRISHTI offers varieties of different styles of stage decorations, chair decorations for the brides
-					and the grooms, decoration of the Mandap where the marriage ceremony will take place, decoration of
-					the venue. The Drishti take good care of the requirement of the clients and use decoration
-					techniques that match the personality of the bride and groom. The decoration is arranged according
-					to the theme of the wedding. A special decorating arrangement is done for decorating the place where
-					the Varmala takes place. Proper lighting arrangement to give the entire venue a divine look is taken
-					care of. At Drishti we try to make your wedding a dream wedding. </p>
+        <div class="about-image">
+          <img
+            src="/img/haldi 1.webp"
+            alt="Wedding Services"
+            class="image-hover-effect"
+          />
+        </div>
+        <div class="about-content me-lg-5">
+          <h1 class="mt-5 mb-4 stylish-heading">Mandap Event</h1>
 
-			</div>
-			<div class="about-image">
-				<img src="/img/carosel_wedding_image.webp" alt="Wedding Services" class="image-hover-effect">
-			</div>
-			<div class="about-content me-lg-5" id="haldi-event">
-				<h1 class="mt-5 mb-4  stylish-heading">Haldi Event</h1>
+          <p class="fw-bold about-description">
+            DRISHTI offers varieties of different styles of stage decorations,
+            chair decorations for the brides and the grooms, decoration of the
+            Mandap where the marriage ceremony will take place, decoration of
+            the venue. The Drishti take good care of the requirement of the
+            clients and use decoration techniques that match the personality of
+            the bride and groom. The decoration is arranged according to the
+            theme of the wedding. A special decorating arrangement is done for
+            decorating the place where the Varmala takes place. Proper lighting
+            arrangement to give the entire venue a divine look is taken care of.
+            At Drishti we try to make your wedding a dream wedding.
+          </p>
+        </div>
+        <div class="about-image">
+          <img
+            src="/img/carosel_wedding_image.webp"
+            alt="Wedding Services"
+            class="image-hover-effect"
+          />
+        </div>
+        <div class="about-content me-lg-5" id="haldi-event">
+          <h1 class="mt-5 mb-4 stylish-heading">Haldi Event</h1>
 
-				<p class="fw-bold about-description">
-					The Haldi ceremony is one of the most vibrant and cherished pre-wedding rituals, filled with joy,
-					laughter, and tradition. At Drishti Events, we aim to make your Haldi ceremony a memorable and
-					magical affair. Our expert team creates stunning and culturally rich décor that captures the essence
-					of this special occasion, blending traditional elements with modern aesthetics. From seating
-					arrangements to floral embellishments in shades of yellow, we ensure every detail aligns with the
-					theme. Additionally, our catering services offer a wide range of delectable dishes tailored to your
-					preferences, ensuring your guests relish every bite. To enhance the celebratory mood, we curate
-					engaging entertainment options such as live music, traditional performances, or fun-filled games,
-					making your Haldi ceremony a delightful experience for everyone. </p>
+          <p class="fw-bold about-description">
+            The Haldi ceremony is one of the most vibrant and cherished
+            pre-wedding rituals, filled with joy, laughter, and tradition. At
+            Drishti Events, we aim to make your Haldi ceremony a memorable and
+            magical affair. Our expert team creates stunning and culturally rich
+            décor that captures the essence of this special occasion, blending
+            traditional elements with modern aesthetics. From seating
+            arrangements to floral embellishments in shades of yellow, we ensure
+            every detail aligns with the theme. Additionally, our catering
+            services offer a wide range of delectable dishes tailored to your
+            preferences, ensuring your guests relish every bite. To enhance the
+            celebratory mood, we curate engaging entertainment options such as
+            live music, traditional performances, or fun-filled games, making
+            your Haldi ceremony a delightful experience for everyone.
+          </p>
+        </div>
+        <div class="about-image">
+          <img
+            src="../img/haldi2.webp"
+            alt="Wedding Services"
+            class="image-hover-effect"
+          />
+        </div>
+        <div class="about-content me-lg-5">
+          <h1 class="mt-5 mb-4 stylish-heading" id="catering-decoration-event">
+            Catering & Decoration Event
+          </h1>
 
-			</div>
-			<div class="about-image">
-				<img src="../img/haldi2.webp" alt="Wedding Services" class="image-hover-effect">
-			</div>
-			<div class="about-content me-lg-5">
-				<h1 class="mt-5 mb-4  stylish-heading " id="catering-decoration-event">Catering & Decoration Event </h1>
+          <p class="fw-bold about-description">
+            At Drishti Events, we deliver exceptional catering and stunning
+            decorations to make your events unforgettable. Our catering services
+            feature customized menus crafted with fresh, high-quality
+            ingredients to suit diverse tastes and themes. Paired with this, our
+            decoration services transform venues into captivating spaces with
+            elegant floral arrangements, creative lighting, and bespoke props
+            that perfectly reflect your event’s essence. Together, our catering
+            and décor create a seamless and enchanting experience for you and
+            your guests.
+          </p>
+        </div>
+        <div class="about-image">
+          <img
+            src="../img/catering.webp"
+            alt="Wedding Services"
+            class="image-hover-effect"
+          />
+        </div>
+        <div class="about-content me-lg-5">
+          <h1 class="mt-5 mb-4 stylish-heading" id="catering-decoration-event">
+            Destination Weeding Events
+          </h1>
 
-				<p class="fw-bold about-description">
-					At Drishti Events, we deliver exceptional catering and stunning decorations to make your events
-					unforgettable. Our catering services feature customized menus crafted with fresh, high-quality
-					ingredients to suit diverse tastes and themes. Paired with this, our decoration services transform
-					venues into captivating spaces with elegant floral arrangements, creative lighting, and bespoke
-					props that perfectly reflect your event’s essence. Together, our catering and décor create a
-					seamless and enchanting experience for you and your guests. </p>
+          <p class="fw-bold about-description">
+            Turn your dream wedding into a breathtaking reality with Drishti
+            Events Services. We specialize in curating luxurious destination
+            weddings at the most picturesque locations across India and beyond.
+            Whether it’s a royal palace, a serene beach, or a stunning hillside
+            resort, we ensure a seamless experience with elegant décor, flawless
+            planning, and personalized touches. From venue selection to guest
+            management, every detail is handled with perfection, allowing you to
+            cherish every moment of your big day. Let us craft a magical and
+            unforgettable wedding experience for you!
+          </p>
 
-				<a href="/booknow.html" class="btn btn-primary mt-3 ms-lg-5">Submit Query</a>
-			</div>
-			<div class="about-image">
-				<img src="../img/catering.webp" alt="Wedding Services" class="image-hover-effect">
-			</div>
+          
+        </div>
+        <div class="about-image">
+          <img
+            src="../img/weeding/destination.webp"
+            alt="Wedding Services"
+            class="image-hover-effect"
+          />
+        </div>
+      </div>
+	  <a href="/booknow.html" class="btn btn-primary mt-3 ms-lg-5"
+            >Submit Query</a
+          >
+    </div>
 
+    <!------------------------------------------- Footer Section----------------------------------------- -->
+    <footer
+      class="text-center text-lg-start text-muted"
+      style="background-color: #d4c4b5"
+    >
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
 
-		</div>
-	</div>
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-white">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="" class="me-4 text-white">
+            <i class="fab fa-twitter"></i>
+          </a>
 
+          <a href="" class="me-4 text-white">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-white">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
 
-	<!------------------------------------------- Footer Section----------------------------------------- -->
-	<footer class="text-center text-lg-start text-muted" style="background-color: #d4c4b5">
-		<!-- Section: Social media -->
-		<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-			<!-- Left -->
-			<div class="me-5 d-none d-lg-block">
-				<span>Get connected with us on social networks:</span>
-			</div>
-			<!-- Left -->
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">Drishti Events Logo</h6>
+              <p class="Courgette text-black">
+                Drishti Event Services is a special event planning, decorating
+                and styling firm based in the capital city, New Delhi.
+              </p>
+            </div>
+            <!-- Grid column -->
 
-			<!-- Right -->
-			<div>
-				<a href="" class="me-4 text-white">
-					<i class="fa-brands fa-facebook"></i>
-				</a>
-				<a href="" class="me-4 text-white">
-					<i class="fab fa-twitter"></i>
-				</a>
-
-				<a href="" class="me-4 text-white">
-					<i class="fab fa-instagram"></i>
-				</a>
-				<a href="" class="me-4 text-white">
-					<i class="fab fa-linkedin"></i>
-				</a>
-
-			</div>
-			<!-- Right -->
-		</section>
-		<!-- Section: Social media -->
-
-		<!-- Section: Links  -->
-		<section class="">
-			<div class="container text-center text-md-start mt-5">
-				<!-- Grid row -->
-				<div class="row mt-3">
-					<!-- Grid column -->
-					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-						<!-- Content -->
-						<h6 class="text-uppercase fw-bold mb-4">Drishti Events Logo</h6>
-						<p class="Courgette text-black">
-							Drishti Event Services is a special event planning, decorating
-							and styling firm based in the capital city, New Delhi.
-						</p>
-					</div>
-					<!-- Grid column -->
-
-					<!-- Grid column -->
-					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-						<!-- Links -->
-						<h6 class="text-uppercase fw-bold mb-4">QUICK LInks</h6>
-						<p>
-							<a href="/About.html" class="text-black text-decoration-none">
-								<i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
-								About Us</a>
-						</p>
-						<!-- <p>
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">QUICK LInks</h6>
+              <p>
+                <a href="/About.html" class="text-black text-decoration-none">
+                  <i
+                    class="fa fa-angle-double-right text-black"
+                    aria-hidden="true"
+                  ></i>
+                  About Us</a
+                >
+              </p>
+              <!-- <p>
                 <a href="!" class="text-black text-decoration-none">
                   <i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
                   Services</a
                 >
               </p> -->
-						<p>
-							<a href="/contact.html" class="text-black text-decoration-none">
-								<i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
-								Contact</a>
-						</p>
-						<p>
-							<a href="/booknow.html" class="text-black text-decoration-none">
-								<i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
-								Book Now</a>
-						</p>
-						<p>
-							<a href="/privacy-policy.html" class="text-black text-decoration-none">
-								<i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
-								Privacy Policy</a>
-						</p>
-						<p>
-							<a href="/terms&conditions.html" class="text-black text-decoration-none">
-								<i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
-								Terms & Conditions</a>
-						</p>
-					</div>
+              <p>
+                <a href="/contact.html" class="text-black text-decoration-none">
+                  <i
+                    class="fa fa-angle-double-right text-black"
+                    aria-hidden="true"
+                  ></i>
+                  Contact</a
+                >
+              </p>
+              <p>
+                <a href="/booknow.html" class="text-black text-decoration-none">
+                  <i
+                    class="fa fa-angle-double-right text-black"
+                    aria-hidden="true"
+                  ></i>
+                  Book Now</a
+                >
+              </p>
+              <p>
+                <a
+                  href="/privacy-policy.html"
+                  class="text-black text-decoration-none"
+                >
+                  <i
+                    class="fa fa-angle-double-right text-black"
+                    aria-hidden="true"
+                  ></i>
+                  Privacy Policy</a
+                >
+              </p>
+              <p>
+                <a
+                  href="/terms&conditions.html"
+                  class="text-black text-decoration-none"
+                >
+                  <i
+                    class="fa fa-angle-double-right text-black"
+                    aria-hidden="true"
+                  ></i>
+                  Terms & Conditions</a
+                >
+              </p>
+            </div>
 
-					<!-- Grid column -->
+            <!-- Grid column -->
 
-					<!-- Grid column -->
-					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-						<!-- Links -->
-						<h6 class="text-uppercase fw-bold mb-4">Services</h6>
-						<p>
-							<a href="#" class="text-black text-decoration-none"></a>
-						</p>
-						<p>
-							<a href="../standard-events/corporate-events.html" class="text-decoration-none text-black">
-								<i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
-								Corporate Events</a>
-						</p>
-						<p>
-							<a href="../standard-events/wedding-events.html" class="text-black text-decoration-none">
-								<i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
-								Weeding Events</a>
-						</p>
-						<p>
-							<a href="../standard-events/birthday.html" class="text-black text-decoration-none">
-								<i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
-								Birthday Events</a>
-						</p>
-						<p>
-							<a href="../special-events/valentine-day.html" class="text-black text-decoration-none">
-								<i class="fa fa-angle-double-right text-black" aria-hidden="true"></i>
-								valentine Day Events</a>
-						</p>
-					</div>
-					<!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Services</h6>
+              <p>
+                <a href="#" class="text-black text-decoration-none"></a>
+              </p>
+              <p>
+                <a
+                  href="../standard-events/corporate-events.html"
+                  class="text-decoration-none text-black"
+                >
+                  <i
+                    class="fa fa-angle-double-right text-black"
+                    aria-hidden="true"
+                  ></i>
+                  Corporate Events</a
+                >
+              </p>
+              <p>
+                <a
+                  href="../standard-events/wedding-events.html"
+                  class="text-black text-decoration-none"
+                >
+                  <i
+                    class="fa fa-angle-double-right text-black"
+                    aria-hidden="true"
+                  ></i>
+                  Weeding Events</a
+                >
+              </p>
+              <p>
+                <a
+                  href="../standard-events/birthday.html"
+                  class="text-black text-decoration-none"
+                >
+                  <i
+                    class="fa fa-angle-double-right text-black"
+                    aria-hidden="true"
+                  ></i>
+                  Birthday Events</a
+                >
+              </p>
+              <p>
+                <a
+                  href="../special-events/valentine-day.html"
+                  class="text-black text-decoration-none"
+                >
+                  <i
+                    class="fa fa-angle-double-right text-black"
+                    aria-hidden="true"
+                  ></i>
+                  valentine Day Events</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
 
-					<!-- Grid column -->
-					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-						<!-- Links -->
-						<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-						<p class="text-black">
-							<i class="fas fa-home me-3 text-black"></i> A-88 Sec -4 Noida
-						</p>
-						<p class="text-black">
-							<i class="fas fa-envelope me-3 text-black"></i>
-							info@drishtieventservices.com
-						</p>
-						<p class="text-black">
-							<i class="fas fa-phone me-3 text-black"></i> + 01 234 567 88
-						</p>
-						<p class="text-black">
-							<i class="fas fa-print me-3 text-black"></i> + 01 234 567 89
-						</p>
-					</div>
-					<!-- Grid column -->
-				</div>
-				<!-- Grid row -->
-			</div>
-		</section>
-		<!-- Section: Links  -->
-	</footer>
-	<a href="https://wa.me/yourwhatsappnumber" target="_blank" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    z-index: 1000;
-">
-		<i class="fab fa-whatsapp"></i>
-	</a>
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p class="text-black">
+                <i class="fas fa-home me-3 text-black"></i> Sec - 4 Noida
+              </p>
+              <p class="text-black">
+                <i class="fas fa-envelope me-3 text-black"></i>
+                info@drishtieventservices.com
+              </p>
+              <p class="text-black">
+                <i class="fas fa-phone me-3 text-black"></i> + 01 234 567 88
+              </p>
+              <p class="text-black">
+                <i class="fas fa-print me-3 text-black"></i> + 01 234 567 89
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+    </footer>
+    <a
+      href="https://wa.me/yourwhatsappnumber"
+      target="_blank"
+      style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: white;
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        z-index: 1000;
+      "
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 text-center text-md-start left">
-					<p>&copy;2025 Drishti Events All rights reserved</p>
-				</div>
-				<div class="col-md-6 text-center text-md-end right">
-					<p>
-						Designed and Developed by
-						<a href="https://kanakdrishtiinfo.com/" target="_blank">Kanak Drishti Infotech</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start left">
+            <p>&copy;2025 Drishti Events All rights reserved</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end right">
+            <p>
+              Designed and Developed by
+              <a href="https://kanakdrishtiinfo.com/" target="_blank"
+                >Kanak Drishti Infotech</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-	<script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-	<script>
-		// Initialize Swiper
-		document.addEventListener("DOMContentLoaded", function () {
-			new Swiper(".swiper-container", {
-				loop: true,
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
-				autoplay: {
-					delay: 3000, // Auto-slide every 3 seconds
-				},
-				effect: "slide",
-				grabCursor: true,
-			});
-		});
-	</script>
-
-
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      // Initialize Swiper
+      document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".swiper-container", {
+          loop: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          autoplay: {
+            delay: 3000, // Auto-slide every 3 seconds
+          },
+          effect: "slide",
+          grabCursor: true,
+        });
+      });
+    </script>
+  </body>
 </html>
